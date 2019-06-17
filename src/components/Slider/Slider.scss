@@ -10,7 +10,6 @@
     transition: transform 500ms ease-out;
     padding: 0 $slider-padding;
     white-space: nowrap;
-    background-color: red;
 }
 
 .slider-item:hover {
@@ -40,12 +39,12 @@
 .slider-item {
     padding: 0 2px; 
 }
-.slider-item:first-child {
-    padding: 0 2px 0 0;
-}
-.slider-item:last-child {
-    padding: 0 0 0 2px
-}
+// .slider-item:first-child {
+//     padding: 0 2px 0 0;
+// }
+// .slider-item:last-child {
+//     padding: 0 0 0 2px
+// }
 .slider-item {
     display: inline-block;
 
