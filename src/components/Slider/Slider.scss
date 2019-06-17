@@ -1,0 +1,98 @@
+@import '../../variables';
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    // for scrolling left/right
+    transition: transform 500ms ease-out;
+    padding: 0 $slider-padding;
+    white-space: nowrap;
+    background-color: red;
+}
+
+.slider-item:hover {
+    transform: scale(1.2) translateX(0);
+    // scale enter animation
+    // translate enter animation is in Slider.js
+    transition: transform $transition-duration ease $transition-delay;
+}
+
+// .slide-left,
+// .slide-left-double {
+//     transform: translateX(-10%);
+//     transition: transform $transition-duration ease $transition-delay;
+// }
+// .slide-left-double {
+//     transform: translateX(-20%);
+// }
+// .slide-right,
+// .slide-right-double {
+//     transform: translateX(10%);
+//     transition: transform $transition-duration ease $transition-delay;
+// }
+// .slide-right-double {
+//     transform: translateX(20%);
+// }
+
+.slider-item {
+    padding: 0 2px; 
+}
+.slider-item:first-child {
+    padding: 0 2px 0 0;
+}
+.slider-item:last-child {
+    padding: 0 0 0 2px
+}
+.slider-item {
+    display: inline-block;
+
+    @media screen and (min-width: 1400px) {
+        width: 16.66666667%
+    }
+
+    @media screen and (max-width: 1399px) {
+        width: 20%;
+    }
+
+    @media screen and (max-width: 1099px) {
+        width: 25%;
+    }
+
+    @media screen and (max-width: 799px) {
+        width: 33.33333333%;
+    }
+    
+    // scale and translate exit animation
+    transition: transform $transition-duration ease $transition-exit-delay;
+}
+
+.slider-item-left-edge {
+    transform-origin: left;
+}
+
+.slider-item-right-edge {
+    transform-origin: right;
+}
+
+
+button {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    width: $slider-padding;
+    height: 100%;
+    z-index: 40;
+    background-color: rgba(20, 20, 20, .5);
+    background-color: rgba(255,255,255,.5);
+    border: 0px;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+.leftbutton {
+    left: 0;
+}

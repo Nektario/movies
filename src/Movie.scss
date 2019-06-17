@@ -1,0 +1,96 @@
+@import './variables';
+
+.row {
+    margin: 57px 0;
+    
+    .row-header {
+        display: flex;
+        align-items: center;
+        height: 55px;
+        padding-left: $slider-padding;
+        
+        .row-title {
+            color: white;
+            font-size: 26px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+    }
+
+    .movie {
+        //cursor: pointer;
+        //pointer-events: auto;
+
+        img {
+            height: 100%;
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        // opacity exit animation
+        transition: opacity $transition-duration $transition-exit-delay;
+    }
+
+    .overlay:hover {
+        opacity: 1;
+        // opacity enter animation
+        transition: opacity $transition-duration $transition-delay;
+    }
+    
+    .actions {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-bottom: 8px;
+        margin-right: 8px;
+        
+        .icon {
+            padding: 8px;
+            margin-bottom: 8px;
+            width: 12px;
+            height: 12px;
+            color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, .7);
+            cursor: pointer;
+        }
+
+        .icon.fa-play {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    
+    .info {
+        padding: 8px;
+        font-size: 13px;
+        color: white;
+        background-color: rgba(0, 0, 0, .7);
+
+        div:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .rated {
+            border: 1px solid white;
+            padding: 1px 6px;
+            margin-right: 4px;
+        }
+    }
+}
