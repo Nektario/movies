@@ -5,18 +5,29 @@ import { faPlay, faMale, faFemale, faBaby, faInfo as faInfo } from '@fortawesome
 
 // It's too slow to render the Actions and Info components for all items when they mount.
 // So instead, they only render for an item once it has been hovered
-function Movie({ item: movie, className, onMouseEnter, onMouseLeave, ...rest }) {
+const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, ...rest }, ref) => {
     const [wasHovered, setWasHovered] = useState(false)
     movie.rated = movie.rated ? movie.rated : 'NR'
     
     return (
-        <div className={`movie ${className}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...rest}> 
-        {/* style={{backgroundImage: `url(${movie.poster})`}} */}
-            <img src={movie.poster} />
-            <div className='overlay'>
-                <Actions movie={movie} shouldShow={wasHovered} />
-                <Info movie={movie} shouldShow={wasHovered} />
-            </div>
+        <div
+            className={`movie ${className}`}
+            data-uid={movie.uid}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            ref={ref}
+            {...rest}
+        > 
+            { isVisible &&
+                <>
+                    <img src={movie.poster} />
+
+                    <div className='overlay'>
+                        <Actions movie={movie} shouldShow={wasHovered} />
+                        <Info movie={movie} shouldShow={wasHovered} />
+                    </div>
+                </>
+            }
         </div>
     )
 
@@ -28,7 +39,7 @@ function Movie({ item: movie, className, onMouseEnter, onMouseLeave, ...rest }) 
     function handleMouseLeave() {
         onMouseLeave && onMouseLeave()
     }
-}
+})
 
 function Info({ shouldShow, movie }) {
     function convertMinsToHours(minutes) {
@@ -49,7 +60,7 @@ function Info({ shouldShow, movie }) {
                     { movie.year } &bull; { convertMinsToHours(movie.runtime_minutes) }
                 </div>
                 <div>
-                    { movie.genres.slice(0, 4).join(', ') }
+                    { movie.genres.slice(0, 3).join(', ') }
                 </div>
             </div>
         )
