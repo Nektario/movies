@@ -1,0 +1,9 @@
+@import './variables';
+
+.stack {
+    --space: 1.5rem;
+}
+
+.stack > * + * {
+    margin-top: var(--space);
+}

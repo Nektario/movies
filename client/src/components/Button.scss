@@ -1,0 +1,195 @@
+@import "../variables";
+
+$button-background: rgba(51,51,51,.4);
+$button-hover: #e6e6e6;
+$button-active: #ccc;
+
+.btn {
+    line-height: 100%;
+    font-family: $primary-font-family;
+    font-weight: 600;
+    border-radius: 4px;	
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.btn-contained {
+    color: white;
+    background-color: $button-background;
+    border: 0;
+    @include Elevation(0);
+    
+    &:hover,
+    &:focus {
+        background-color: $button-hover;
+        @include Elevation(4);
+    }
+    &:active {
+        background-color: $button-active;
+        @include Elevation(8);
+    }
+}
+.btn-contained.btn-disabled {
+    cursor: not-allowed;
+    @include Elevation(0);
+    
+    &:hover {
+        background-color: #aaa;
+        @include Elevation(0);
+    }
+}
+
+.btn-outlined {
+    color: $button-background;
+    background-color: transparent;
+    border: 1px solid $button-background;
+    
+    &:hover {
+        background-color: rgba(110, 172, 228, 0.08);
+    }
+    &:focus {
+        background-color: rgba(110, 172, 228, 0.15);
+    }
+    &:active {
+        background-color: rgba(110, 172, 228, 0.25);
+    }
+}
+
+.btn-text {
+    color: $button-background;
+    background-color: transparent;
+    border: 0px;
+    padding: 0px 8px;
+
+    &:hover {
+        background-color: rgba(87, 165, 232, .08);
+    }
+    &:focus {
+        background-color: rgba(87, 165, 232, .15);
+    }
+    &:active {
+        background-color: rgba(87, 165, 232, .25);
+    }
+
+    .progress {
+        height: 4px;
+
+        .indeterminate {
+            background-color: #abc; 
+        }
+    }
+}
+
+.btn-text.btn-disabled {
+    cursor: not-allowed;
+    
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+
+.progress {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    overflow: hidden; 
+
+    .indeterminate {
+          background-color: white; 
+    }
+
+    .indeterminate:before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            -webkit-animation: indeterminate 4s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+                    animation: indeterminate 4s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; 
+    }
+
+    .indeterminate:after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            -webkit-animation: indeterminate-short 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+                    animation: indeterminate-short 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            -webkit-animation-delay: 2s;
+                    animation-delay: 2s; 
+    }
+}
+
+  
+@-webkit-keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%; 
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    } 
+}
+
+@keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@-webkit-keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+@keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    } 
+}

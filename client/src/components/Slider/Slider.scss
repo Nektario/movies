@@ -7,8 +7,11 @@
 
 .slider {
     // for scrolling left/right
-    transition: transform 500ms ease-out;
+    //transition: cubic-bezier(0.4, 0, 0.2, 1) 500ms;
     padding: 0 $slider-padding;
+    white-space: nowrap;
+}
+.nothing {
     white-space: nowrap;
 }
 
@@ -37,7 +40,7 @@
 // }
 
 .slider-item {
-    padding: 0 2px; 
+    padding: 2px 2px;
 }
 // .slider-item:first-child {
 //     padding: 0 2px 0 0;
@@ -63,7 +66,7 @@
     @media screen and (max-width: 799px) {
         width: 33.33333333%;
     }
-    
+
     // scale and translate exit animation
     transition: transform $transition-duration ease $transition-exit-delay;
 }

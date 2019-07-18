@@ -1,19 +1,20 @@
 @import './variables';
 
 .row {
-    margin: 57px 0;
-    
+    margin: 38px 0;
+
     .row-header {
         display: flex;
         align-items: center;
-        height: 55px;
         padding-left: $slider-padding;
         
+        
         .row-title {
-            color: white;
-            font-size: 26px;
+            color: #eee;
+            font-size: 1.35vw;
             line-height: 24px;
             font-weight: 600;
+            padding: 8px 0;
         }
     }
 

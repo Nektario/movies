@@ -1,7 +1,9 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useEffect, useReducer, useRef } from 'react'
 import Header from './Header'
 import Movie from './Movie'
 import axios from 'axios'
+import moment from 'moment'
+import VideoPlayer from './components/VideoPlayer'
 import MovieFilters from './models/MovieFilters'
 import Slider from './components/Slider/Slider'
 import './App.scss'
@@ -12,7 +14,7 @@ function movieFilterReducer(state, action) {
     }
 
     switch (action.type) {
-        case 'set' :
+        case 'initial-movie-load' :
             return { ...state, allMovies: action.payload, moviesToDisplay: action.payload.sort(sortByTitle), currentSort: ['sort-title-asc']}
         case 'sort-title-asc' :
             return { ...state, moviesToDisplay: state.moviesToDisplay.sort(sortByTitle), currentSort: ['sort-title-asc'] }
@@ -45,14 +47,35 @@ function App() {
         currentSort: [],
         movieFilters: MovieFilters()
     })
-    //const url = 'http://192.168.86.2:8090/movies'
-    const url = 'data/movies.json'
+
+    const featuredMovies = [
+        { 
+            uid: '401981',
+            title: 'Red Sparrow',
+            featureLogo: 'rs.png',
+            featureTrailer: {
+                name: 'red_sparrow_trailer.mp4',
+                mimeType: 'video/mp4'
+            }
+        },
+        { 
+            uid: '383498',
+            title: 'Deadpool 2',
+            featureLogo: 'dp2.png',
+            featureTrailer: {
+                name: 'deadpool_2_trailer.mp4',
+                mimeType: 'video/mp4'
+            }
+        }
+    ]
+    const featuredMovie = featuredMovies[Math.floor(Math.random() * featuredMovies.length)]
+    const url = '/data/movies.json'
 
     useEffect(() => {
         axios.get(url)
             .then(response => {
                 if (response.data) {
-                    dispatch({ type: 'set', payload: response.data.items })
+                    dispatch({ type: 'initial-movie-load', payload: response.data.items })
                 }
             })
             .catch(e => console.log(e))
@@ -64,32 +87,47 @@ function App() {
 
     return (
         <div>
-            <Header
+            {/* <Header
                 dispatch={dispatch}
                 currentSort={state.currentSort}
                 currentFilter={state.currentFilter}
                 totalMovies={state && state.allMovies.length}
                 displayedMovies={state.moviesToDisplay.length}
-            />
+            /> */}
 
             {/* <div className='video'>
-                <iframe src={`${getFeatureVideoLink(state.allMovies[350].trailer)}`} frameBorder="0" allowFullScreen allow='autoplay'></iframe>
+                <div className='video-background'>
+                    <div className='video-foreground'>
+                        <iframe src={`${getFeatureVideoLink(state.allMovies[350].trailer)}`} frameBorder="0" allowFullScreen allow='autoplay'></iframe>
+                    </div>
+                </div>
             </div> */}
 
+            <div id='feature'>
+                <VideoPlayer
+                    autoplay={true}
+                    loop={false}
+                    movie={state.allMovies
+                        .filter(movie => movie.uid === featuredMovie.uid)
+                        .map(movie => ({ ...movie, ...featuredMovie}))[0]}
+                />
+                <div className='bottom-fader'></div>
+            </div>
+
             <main>
-                <Row title='Recentaly Added' items={
-                    state.moviesToDisplay
-                        .filter(movie => movie.metadata.created_date_millis > new Date().getTime() - 365 * 24 * 60 * 60 * 1000)
-                        .sort((a, b) => b.metadata.created_date_millis - a.metadata.created_date_millis)
+                <Row title='New Releases' items={
+                    state.allMovies
+                        .filter(movie => moment(movie.release_date) >= moment().subtract(2, 'year'))
+                        .sort((a, b) => b.release_date - a.release_date)
                 }/>
 
                 <Row title='Kids' items={
-                    state.moviesToDisplay
+                    state.allMovies
                         .filter(movie => movie.genres.includes('Animation') && (movie.rated === 'G' || movie.rated === 'PG'))
                 }/>
 
                 <Row title='Comedies' items={
-                    state.moviesToDisplay
+                    state.allMovies
                         .filter(movie => movie.genres.includes('Comedy'))
                 }/>
             </main>
@@ -100,7 +138,7 @@ function App() {
 function Row({ title, items }) {
     return (
         <div className='row'>
-            <RowHeader title={title} numItems={items.length} />
+            <RowHeader title={title} />
             <Slider items={items} component={Movie} />
         </div>
     )

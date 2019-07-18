@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import * as config from './config'
 import './Movie.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faMale, faFemale, faBaby, faInfo as faInfo } from '@fortawesome/free-solid-svg-icons'
 
 // It's too slow to render the Actions and Info components for all items when they mount.
 // So instead, they only render for an item once it has been hovered
+const POSTER_URL = config.POSTER_URL
+
 const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, ...rest }, ref) => {
     const [wasHovered, setWasHovered] = useState(false)
     movie.rated = movie.rated ? movie.rated : 'NR'
@@ -13,6 +16,7 @@ const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseL
         <div
             className={`movie ${className}`}
             data-uid={movie.uid}
+            data-title={movie.title}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             ref={ref}
@@ -20,7 +24,7 @@ const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseL
         > 
             { isVisible &&
                 <>
-                    <img src={movie.poster} />
+                    <img src={`${POSTER_URL}${movie.poster_path}`} />
 
                     <div className='overlay'>
                         <Actions movie={movie} shouldShow={wasHovered} />
@@ -57,7 +61,7 @@ function Info({ shouldShow, movie }) {
                 </div>
                 <div>
                     <span className='rated'>{ movie.rated }</span>
-                    { movie.year } &bull; { convertMinsToHours(movie.runtime_minutes) }
+                    { movie.release_date } &bull; { convertMinsToHours(movie.runtime_minutes) }
                 </div>
                 <div>
                     { movie.genres.slice(0, 3).join(', ') }
