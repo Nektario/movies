@@ -30,6 +30,7 @@ async function execute() {
     // remove some movies that we don't want
     popularMovies.delete(537915) // After
     popularMovies.delete(332562) // A star is born
+    popularMovies.delete(454983) // Kissing Booth
 
     const movies = []
     for (const movie of popularMovies) {
