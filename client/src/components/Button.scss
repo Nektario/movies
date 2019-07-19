@@ -14,8 +14,11 @@ $button-active: #ccc;
     letter-spacing: 1px;
     cursor: pointer;
     position: relative;
+    
+    .button-icon + * {
+        margin-left: .5vw;
+    }
 }
-
 
 .btn-contained {
     color: white;
@@ -83,7 +86,6 @@ $button-active: #ccc;
         }
     }
 }
-
 .btn-text.btn-disabled {
     cursor: not-allowed;
     
@@ -91,7 +93,6 @@ $button-active: #ccc;
         background-color: #eee;
     }
 }
-
 
 .progress {
     position: absolute;
@@ -132,7 +133,6 @@ $button-active: #ccc;
                     animation-delay: 2s; 
     }
 }
-
   
 @-webkit-keyframes indeterminate {
     0% {

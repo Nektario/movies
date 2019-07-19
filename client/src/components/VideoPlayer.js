@@ -1,16 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react'
-import Button from '../components/Button'
-import * as config from '../config'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPlus, faVolumeMute, faVolumeUp, faRedoAlt } from '@fortawesome/free-solid-svg-icons'
+import Transition from './Transition'
+import VideoReplayButton from './VideoReplayButton'
+import RatedBar from './RatedBar'
+import VideoVolumeButton from './VideoVolumeButton'
 import './VideoPlayer.scss'
 
-const BACKDROP_URL = config.BACKDROP_URL
-
-function VideoPlayer({ movie, autoplay = true, loop = false }) {
-    const AUTOPLAY_DELAY_MILLIS = 3000
+function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVideoPlayed, onVideoEnded, showRatedBar = true, movieRated }) {
     const [isMuted, setIsMuted] = useState(true)
-    const [isVideoVisible, setIsVideoVisible] = useState(false)
     const [isVideoEnded, setIsVideoEnded] = useState(false)
     const videoRef = useRef()
     
@@ -34,88 +30,59 @@ function VideoPlayer({ movie, autoplay = true, loop = false }) {
 
     function handleVideoReplayClick(e) {
         setIsVideoEnded(false)
-        setIsVideoVisible(true)
         togglePlayState(e)
     }
 
     function handleVideoEnded() {
+        if (typeof onVideoEnded === 'function') {
+            onVideoEnded()
+        }
+
         if (!loop) {
-            setIsVideoVisible(false)
             setIsVideoEnded(true)
         }   
     }
 
-    useEffect(() => {
-        if (autoplay) {
-            setTimeout(() => {
-                setIsVideoVisible(true)
-                videoRef.current.play()
-                //videoRef.current.currentTime = 90
-            }, AUTOPLAY_DELAY_MILLIS)
+    function handleVideoPlayed() {
+        if (typeof onVideoPlayed === 'function') {
+            onVideoPlayed()
         }
-    }, [autoplay])
+    }
 
+    useEffect(() => {
+        if (shouldPlay) {
+            videoRef.current.play()
+        }
+    }, [shouldPlay])
+
+    
     return (
-        <div onClick={togglePlayState}>
+        <div className='video-player' onClick={togglePlayState}>
             <video
-                className='video'
+                className={'video ' + className}
                 loop={loop}
                 muted={isMuted}
                 ref={videoRef}
                 onEnded={handleVideoEnded}
+                onPlay={handleVideoPlayed}
             >
-                <source src={`/media/${movie.featureTrailer.name}`} type={movie.featureTrailer.mimeType} />
+                <source src={path} type={mimeType} />
             </video>
 
-            <div className='video-overlay no-select'>
-                
-                <div className='controls-left no-select stack'>
-                    <div className='title'>
-                        <img src={`/media/${movie.featureLogo}`} />
-                    </div>
-                    
-                    <div className='action-buttons'>
-                        <Button>
-                            <FontAwesomeIcon icon={faPlay} />
-                            <span>Play</span>
-                        </Button>
-
-                        <Button>
-                            <FontAwesomeIcon icon={faPlus} />
-                            <span>My List</span>
-                        </Button>
-                    </div>
-
-                    <div className={`info ${isVideoVisible ? 'hidden' : ''}`}>
-                        <div className='tagline'>{movie.tagline}</div>
-                    </div>
+            {/* This is absolutely positioned */}
+            { showRatedBar &&
+                <div className='video-rated-bar'>
+                    <RatedBar rated={movieRated} />
                 </div>
-
-                <div className='controls-right no-select'>
-                    <FontAwesomeIcon
-                        className={`icon ${isVideoVisible ? '' : 'hidden-icon'}`}
-                        fixedWidth
-                        icon={isMuted ? faVolumeMute : faVolumeUp}
-                        onClick={handleVideoVolumeClick}
-                    />
-
-                    <FontAwesomeIcon
-                        className={`icon ${isVideoEnded ? '' : 'hidden-icon'}`}
-                        fixedWidth
-                        icon={faRedoAlt}
-                        onClick={handleVideoReplayClick}
-                    />
-                    
-                    <div className='rating-bar'>
-                        { movie.rated }
-                    </div>
-                </div>
+            }
+            
+            {/* This is absolutely positioned */}
+            <div className='video-controls'>
+                <Transition speed='fast' showFirstChild={!isVideoEnded}>
+                    <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
+                    <VideoReplayButton onClick={handleVideoReplayClick} />
+                </Transition>
             </div>
-
-            <div className={`video-poster ${isVideoVisible ? 'hidden' : ''}`}>
-                <img src={`${BACKDROP_URL}${movie.backdrop_path}`} />
-            </div>
-
         </div>
     )
 }

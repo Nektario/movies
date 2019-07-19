@@ -1,0 +1,26 @@
+.video-player-icon-wrapper {
+    height: 2.5vw;
+    width: 1.5vw;
+    
+    .video-player-icon {
+        //box-sizing: content-box;
+        color: #ccc;
+        height: 2.5vw;
+        width: 2.75vw !important;
+        padding: .6vw;
+        border: 2px solid #999;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, .4);
+        transition: transform cubic-bezier(0.4, 0, 0.2, 1) 350ms;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .video-player-icon:hover,
+    .video-player-icon:focus,
+    .video-player-icon:active {
+        color: #eee;
+        border: 2px solid #ddd;
+        transform: scale(1.1);
+    }
+}

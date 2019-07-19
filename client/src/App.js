@@ -3,9 +3,9 @@ import Header from './Header'
 import Movie from './Movie'
 import axios from 'axios'
 import moment from 'moment'
-import VideoPlayer from './components/VideoPlayer'
 import MovieFilters from './models/MovieFilters'
 import Slider from './components/Slider/Slider'
+import Feature from './components/Feature'
 import './App.scss'
 
 function movieFilterReducer(state, action) {
@@ -52,16 +52,25 @@ function App() {
         { 
             uid: '401981',
             title: 'Red Sparrow',
-            featureLogo: 'rs.png',
+            featureLogo: 'logo_red_sparrow.png',
             featureTrailer: {
                 name: 'red_sparrow_trailer.mp4',
                 mimeType: 'video/mp4'
             }
         },
         { 
+            uid: '284053',
+            title: 'Thor: Ragnarok',
+            featureLogo: 'logo_thor_ragnarok.png',
+            featureTrailer: {
+                name: 'thor_ragnarok_trailer.mp4',
+                mimeType: 'video/mp4'
+            }
+        },
+        { 
             uid: '383498',
             title: 'Deadpool 2',
-            featureLogo: 'dp2.png',
+            featureLogo: 'logo_deadpool2.png',
             featureTrailer: {
                 name: 'deadpool_2_trailer.mp4',
                 mimeType: 'video/mp4'
@@ -104,9 +113,7 @@ function App() {
             </div> */}
 
             <div id='feature'>
-                <VideoPlayer
-                    autoplay={true}
-                    loop={false}
+                <Feature 
                     movie={state.allMovies
                         .filter(movie => movie.uid === featuredMovie.uid)
                         .map(movie => ({ ...movie, ...featuredMovie}))[0]}

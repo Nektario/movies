@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Anton|Squada+One");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 
 $primary-font-family: 'Open Sans', sans-serif;
 
@@ -9,7 +9,7 @@ $transition-exit-delay: 50ms;
 $slider-padding: 3%;
 
 $background: #141414;
-$feature-height: 40vw;
+$feature-height: 42vw;
 
 @mixin Elevation ($dp) {
     @if $dp==0 {
