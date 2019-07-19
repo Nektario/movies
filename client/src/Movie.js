@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import * as config from './config'
 import './Movie.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faMale, faFemale, faBaby, faInfo as faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faMale, faFemale, faBaby, faInfo } from '@fortawesome/free-solid-svg-icons'
 
 // It's too slow to render the Actions and Info components for all items when they mount.
 // So instead, they only render for an item once it has been hovered
 const POSTER_URL = config.POSTER_URL
 
 const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, ...rest }, ref) => {
+    console.log(movie)
     const [wasHovered, setWasHovered] = useState(false)
     movie.rated = movie.rated ? movie.rated : 'NR'
     
@@ -24,7 +25,7 @@ const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseL
         > 
             { isVisible &&
                 <>
-                    <img src={`${POSTER_URL}${movie.poster_path}`} />
+                    <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.name + ' poster'} />
 
                     <div className='overlay'>
                         <Actions movie={movie} shouldShow={wasHovered} />
@@ -61,7 +62,7 @@ function Info({ shouldShow, movie }) {
                 </div>
                 <div>
                     <span className='rated'>{ movie.rated }</span>
-                    { movie.release_date } &bull; { convertMinsToHours(movie.runtime_minutes) }
+                    { new Date(movie.release_date).getFullYear() } &bull; { convertMinsToHours(movie.runtime) }
                 </div>
                 <div>
                     { movie.genres.slice(0, 3).join(', ') }
@@ -78,9 +79,9 @@ function Actions({ shouldShow }) {
         return (
             <div className='actions'>
                 {/* <FontAwesomeIcon icon={faPlay} className='icon' fixedWidth /> */}
-                <FontAwesomeIcon icon={faMale} className='icon' fixedWidth />
+                {/* <FontAwesomeIcon icon={faMale} className='icon' fixedWidth />
                 <FontAwesomeIcon icon={faFemale} className='icon' fixedWidth />
-                <FontAwesomeIcon icon={faBaby} className='icon' fixedWidth />
+                <FontAwesomeIcon icon={faBaby} className='icon' fixedWidth /> */}
                 <FontAwesomeIcon icon={faInfo} className='icon' fixedWidth />
             </div>
         )
