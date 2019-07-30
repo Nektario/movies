@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import usePersistentState from '../hooks/usePersistentState'
 import Transition from './Transition'
 import VideoReplayButton from './VideoReplayButton'
 import RatedBar from './RatedBar'
@@ -6,7 +7,7 @@ import VideoVolumeButton from './VideoVolumeButton'
 import './VideoPlayer.scss'
 
 function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVideoPlayed, onVideoEnded, showRatedBar = true, movieRated }) {
-    const [isMuted, setIsMuted] = useState(true)
+    const [isMuted, setIsMuted] = usePersistentState('video_player_is_muted', true)
     const [isVideoEnded, setIsVideoEnded] = useState(false)
     const videoRef = useRef()
     
@@ -47,6 +48,7 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
         if (typeof onVideoPlayed === 'function') {
             onVideoPlayed()
         }
+        setIsVideoEnded(false)
     }
 
     useEffect(() => {
@@ -55,7 +57,6 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
         }
     }, [shouldPlay])
 
-    
     return (
         <div className='video-player' onClick={togglePlayState}>
             <video
@@ -78,9 +79,9 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
             
             {/* This is absolutely positioned */}
             <div className='video-controls'>
-                <Transition speed='fast' showFirstChild={!isVideoEnded}>
-                    <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
+                <Transition speed='fast' showFirstChild={isVideoEnded}>
                     <VideoReplayButton onClick={handleVideoReplayClick} />
+                    <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
                 </Transition>
             </div>
         </div>
