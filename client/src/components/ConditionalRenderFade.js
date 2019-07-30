@@ -1,16 +1,19 @@
 import React from 'react'
-import { useTransition, animated, config } from 'react-spring'
+import ConditionalRender from './ConditionalRender'
 
 function ConditionalRenderFade(props) {
-    const transitions = useTransition(props.shouldShow, null, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 }
-    })
-
-    return transitions.map(({ item: shouldShow, props: styleProps }) => 
-        shouldShow && <animated.div style={styleProps} key='0'>{ props.children }</animated.div>
+    return (
+        <ConditionalRender {...props} transitions={{
+            from: { opacity: 0 },
+            enter: { opacity: 1 },
+            leave: { opacity: 0 },
+            trail: '5000'
+        }}>
+            { props.children }
+        </ConditionalRender>
     )
+
+    
 }
 
 export default ConditionalRenderFade
