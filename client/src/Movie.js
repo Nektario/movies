@@ -8,27 +8,26 @@ import { faPlay, faMale, faFemale, faBaby, faInfo } from '@fortawesome/free-soli
 // So instead, they only render for an item once it has been hovered
 const POSTER_URL = config.POSTER_URL
 
-const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, ...rest }, ref) => {
-    console.log(movie)
+const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, onMovieDetailsClick, styles }, ref) => {
     const [wasHovered, setWasHovered] = useState(false)
     movie.rated = movie.rated ? movie.rated : 'NR'
     
     return (
         <div
-            className={`movie ${className}`}
+            ref={ref}
+            className={'movie ' + className}
             data-uid={movie.uid}
             data-title={movie.title}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            ref={ref}
-            {...rest}
-        > 
+            style={styles.style}
+        >
             { isVisible &&
                 <>
-                    <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.name + ' poster'} />
+                    <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.title + ' poster'} />
 
                     <div className='overlay'>
-                        <Actions movie={movie} shouldShow={wasHovered} />
+                        <Actions movie={movie} shouldShow={wasHovered} onMovieDetailsClick={onMovieDetailsClick} />
                         <Info movie={movie} shouldShow={wasHovered} />
                     </div>
                 </>
@@ -74,7 +73,7 @@ function Info({ shouldShow, movie }) {
     return null
 }
 
-function Actions({ shouldShow }) {
+function Actions({ shouldShow, onMovieDetailsClick }) {
     if (shouldShow) {
         return (
             <div className='actions'>
@@ -82,7 +81,7 @@ function Actions({ shouldShow }) {
                 {/* <FontAwesomeIcon icon={faMale} className='icon' fixedWidth />
                 <FontAwesomeIcon icon={faFemale} className='icon' fixedWidth />
                 <FontAwesomeIcon icon={faBaby} className='icon' fixedWidth /> */}
-                <FontAwesomeIcon icon={faInfo} className='icon' fixedWidth />
+                <FontAwesomeIcon icon={faInfo} className='icon' fixedWidth onClick={onMovieDetailsClick} />
             </div>
         )
     }
