@@ -57,39 +57,30 @@ function Slider(props) {
         threshold: '0'
     }
     const itemRefs = useRef(props.items.map(() => createRef()))
-    const observer = useRef(null)
+    const observer = useRef()
 
-    // 12 to 22 ms to run initially on 28 items
-    observer.current = new IntersectionObserver((entries, observer) => {
-        const s = new Date().getTime()
-        console.log('Timing start')
-        
-        const newIntersectingState = new Map()
-        const len = entries.length
-        for (let i = 0; i < len; i++) {
-            if (entries[i].isIntersecting) {
-                newIntersectingState.set(entries[i].target.getAttribute('data-uid'), true)
-            } else {
-                newIntersectingState.set(entries[i].target.getAttribute('data-uid'), false)
+    if (!observer.current) {
+        observer.current = new IntersectionObserver((entries, observer) => {
+            const newIntersectingState = new Map()
+            
+            for (const entry of entries) {
+                if (entry.isIntersecting) {
+                    newIntersectingState.set(entry.target.getAttribute('data-uid'), true)
+                } else {
+                    newIntersectingState.set(entry.target.getAttribute('data-uid'), false)
+                }
             }
-        }
-        // entries.forEach(entry => {
-        //     if (entry.isIntersecting) {
-        //         newIntersectingState.set(entry.target.getAttribute('data-uid'), true)
-        //     } else {
-        //         newIntersectingState.set(entry.target.getAttribute('data-uid'), false)
-        //     }
-        // })
-        setVisibleItems(current => new Map([...current, ...newIntersectingState]))
-        console.log('Timing end', new Date().getTime() - s)
-    }, options)
+
+            setVisibleItems(current => new Map([...current, ...newIntersectingState]))
+        }, options)
+    }
     
     useEffect(function setupItemRefs() {
         if (props.items) props.items.forEach((item, i) => {
             observer.current.observe(itemRefs.current[i].current)
         })
 
-    }, [observer, props.items])
+    }, [props.items])
 
     useEffect(function onSliderMeasurementsChanged() {
         if (currentScrollPage > 1) {
@@ -97,7 +88,14 @@ function Slider(props) {
             setScrollDistance(newScrollDistance)
         }
     }, [sliderWidth, sliderPadding, scrollDistance, currentScrollPage])
+
+    useEffect(function removeStylesWhenDetailsOpened() {
+        if (props.isDetailsPaneOpen) {
+            handleHoverOut()
+        }
+    }, [props.isDetailsPaneOpen])
     
+
     function handlePreviousButtonClick() {
         setScrollDistance(scrollDistance => scrollDistance + sliderWidth - sliderPadding)
         setCurrentScrollpage(currentScrollPage => currentScrollPage - 1)
@@ -130,7 +128,7 @@ function Slider(props) {
             moveRightAmount = '0'
         }
         
-        const transition = 'transform 250ms ease 200ms'
+        const transition = 'transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms'
         const moveLeft = {
             style: {
                 transition: transition,
@@ -143,11 +141,19 @@ function Slider(props) {
                 transform: `translateX(${moveRightAmount})`
             }
         }
+        const scale = {
+            style: {
+                transition: transition,
+                transform: 'scale(1.2) translateX(0)'
+            }
+        }
 
         // When hovering on an item, we set the left and right items to shift
         const numToShiftOnLeft = index - (numItemsPerPage * (currentScrollPage - 1)) + 1
         const numToShiftOnRight = numItemsPerPage * currentScrollPage - index
         const transforms = {}
+
+        transforms[index] = scale
         for (let i = index - numToShiftOnLeft; i <= index + numToShiftOnRight; i++) {
             if (i < index) transforms[i] = moveLeft
             if (i > index) transforms[i] = moveRight
@@ -183,16 +189,26 @@ function Slider(props) {
 
                     return (
                         //<div className='nothing slider-item' ref={itemRefs.current[i]} key={item.uid}>
-                            <props.component
-                                ref={itemRefs.current[i]}
-                                key={item.uid}
-                                item={item}
-                                className={`${classes} slider-item no-select`}
-                                onMouseEnter={() => handleHoverSliderItem(i, edgePosition)}
-                                onMouseLeave={handleHoverOut}
-                                isVisible={visibleItems.get(item.uid)}
-                                {...translateXStyles}
-                            />
+                            props.render({
+                                ref: itemRefs.current[i],
+                                item: item,
+                                className: `slider-item ${classes}`,
+                                onMouseEnter: props.isDetailsPaneOpen ? () => props.onItemHoveredWhenDetailsVisible(item) : () => handleHoverSliderItem(i, edgePosition),
+                                onMouseLeave: props.isDetailsPaneOpen ? undefined : handleHoverOut,
+                                isVisible: visibleItems.get(item.uid),
+                                styles: {...translateXStyles}
+                            })
+                            // <props.component
+                            //     ref={itemRefs.current[i]}
+                            //     key={item.uid}
+                            //     item={item}
+                            //     className={`${classes} slider-item`}
+                            //     onMouseEnter={() => handleHoverSliderItem(i, edgePosition)}
+                            //     onMouseLeave={handleHoverOut}
+                            //     onMovieDetailsClick={props.onMovieDetailsClick}
+                            //     isVisible={visibleItems.get(item.uid)}
+                            //     {...translateXStyles}
+                            // />
                         //</div>
                     )   
                 })}

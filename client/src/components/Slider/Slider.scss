@@ -16,10 +16,10 @@
 }
 
 .slider-item:hover {
-    transform: scale(1.2) translateX(0);
+    //transform: scale(1.2) translateX(0);
     // scale enter animation
     // translate enter animation is in Slider.js
-    transition: transform $transition-duration ease $transition-delay;
+    //transition: transform $transition-duration ease $transition-delay;
 }
 
 // .slide-left,
@@ -68,7 +68,7 @@
     }
 
     // scale and translate exit animation
-    transition: transform $transition-duration ease $transition-exit-delay;
+    transition: transform $transition-duration cubic-bezier(0.4, 0, 0.2, 1) $transition-exit-delay;
 }
 
 .slider-item-left-edge {
