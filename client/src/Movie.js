@@ -8,7 +8,7 @@ import { faPlay, faMale, faFemale, faBaby, faInfo } from '@fortawesome/free-soli
 // So instead, they only render for an item once it has been hovered
 const POSTER_URL = config.POSTER_URL
 
-const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseLeave, isVisible, onMovieDetailsClick, styles }, ref) => {
+const Movie = React.forwardRef(({ item: movie, shouldShowOverlay, className, onMouseEnter, onMouseLeave, isVisible, onMovieDetailsClick, styles }, ref) => {
     const [wasHovered, setWasHovered] = useState(false)
     movie.rated = movie.rated ? movie.rated : 'NR'
     
@@ -27,8 +27,8 @@ const Movie = React.forwardRef(({ item: movie, className, onMouseEnter, onMouseL
                     <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.title + ' poster'} />
 
                     <div className='overlay'>
-                        <Actions movie={movie} shouldShow={wasHovered} onMovieDetailsClick={onMovieDetailsClick} />
-                        <Info movie={movie} shouldShow={wasHovered} />
+                        <Actions movie={movie} shouldShow={wasHovered && shouldShowOverlay} onMovieDetailsClick={onMovieDetailsClick} />
+                        <Info movie={movie} shouldShow={wasHovered && shouldShowOverlay} />
                     </div>
                 </>
             }

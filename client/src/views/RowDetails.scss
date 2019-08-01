@@ -1,37 +1,132 @@
 @import '../variables';
 
 .row-details {
-    display: flex;
-    flex-direction: row;
+    position: relative;
     width: 100%;
-    height: 100%;
-    color: white;
+    //height: 33vw; This is set in MovieSliderRow.js
+    margin-left: $slider-padding;
 
+    color: #f8f8f8;
+    font-size: 1.2vw;
+    
+    .row-details-close-button {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        right: 4vw;
+        font-size: 3vw;
+        color: #dededeaa;
+        font-weight: 600;
+        z-index: 10;
+        line-height: 2vw;
+        cursor: pointer;
+        transition: all 250ms;
+
+        &:hover {
+            color: #dedede;
+            transform: scale(1.2);
+        }
+    }
+    
     .row-details-left {
-        margin-left: $slider-padding;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        padding-left: 2px;
+        position: absolute;
+        padding: 16px 0 0 24px;
+        z-index: 1;
+        width: 100vw;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(20,20,20,1) 35%, rgba(20,20,20,.1) 52%);
+        
+        .row-details-left-anim-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .section {
+            margin-bottom: 12px;
+        }
+        
+        .section {
+            max-width: 50%;
+        }
+
+        .plot {
+            max-width: 40%;
+            font-weight: 300;
+            flex: 1;
+        }
+
+        .title,
+        .subtitle {
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: Anton;
+        
+            // for gradient
+            // color: transparent;
+            // background-image: -webkit-linear-gradient(29deg, rgba(255,103,103,1) 0%, rgba(131,11,11,1) 63%);
+            // background-image:    -moz-linear-gradient(29deg, rgba(255,103,103,1) 0%, rgba(131,11,11,1) 63%);
+            // background-image:     -ms-linear-gradient(29deg, rgba(255,103,103,1) 0%, rgba(131,11,11,1) 63%);
+            // background-image:      -o-linear-gradient(29deg, rgba(255,103,103,1) 0%, rgba(131,11,11,1) 63%);
+            // background-image:         linear-gradient(29deg, rgba(255,103,103,1) 0%, rgba(131,11,11,1) 63%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .tagline {
+            margin-top: 2px;
+            font-style: italic;
+        }
 
         .title {
+            font-size: 4vw;
+            // for wrapping words onto their own lines
+            // text-align: center;
+            // display: table-caption;
+            // display: -ms-grid;
+            // width: min-intrinsic;
+            // width: -webkit-min-content;
+            // width: -moz-min-content;
+            // width: min-content;
+            // -ms-grid-columns: min-content;
         }
 
-        .rated {
-            align-self: flex-start;
-            border: 1px solid white;
-            padding: 1px 8px 1px 6px;
+        .subtitle {
+            font-size: 2vw;
         }
 
+        .director-icon {
+            margin-right: 3px;
+        }
+        .director {
+            margin-right: 8px;
+        }
+
+        .stats {
+            .rated {
+                display: inline-flex;
+                margin-right: 8px;
+                
+                div {
+                    max-width: 100%;
+                    width: 100%;
+                    border: 1px solid white;
+                    padding: 1px 6px 1px 6px;
+                }
+            }
+        }
     }
 
     .row-details-right {
-        flex: 1;
-
-        .row-details-backdrop {
-            img {
-                height: 30vw;
-            }
+        position: absolute;
+        right: 0;
+        max-width: 70%;
+        
+        img {
+            //height: 30vw;  This is set in MovieSliderRow.js
+            width: 100%;
+            object-fit: cover;
         }
     }
 
