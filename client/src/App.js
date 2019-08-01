@@ -54,7 +54,6 @@ function App() {
         return null
     }
 
-    console.log('App.js render')
     return (
         <Home allMovies={allMovies} feature={featureMovie} />
     )
