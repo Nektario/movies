@@ -25,24 +25,24 @@ function convertVwToPixels(sizeInVw) {
 function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
     const [currentlyDisplayedMovieDetailsMovie, setCurrentlyDisplayedMovieDetailsMovie] = useState()
     const detailsPaneRef = useRef()
-    const detailsPaneRectRef = useRef()
-    const isAnItemHoveredWhenDetailsPaneIsOpen = useRef()
+    const detailsPaneRectRefVar = useRef()
+    const debounceTimerRefVar = useRef()
+    const isAnItemHoveredWhenDetailsPaneIsOpenRefVar = useRef()
     const isDetailsPaneOpen = shouldOpen
-    let debounceTimer
 
     function handleItemHovered(movie) {
         if (isDetailsPaneOpen) {
-            isAnItemHoveredWhenDetailsPaneIsOpen.current = true
+            isAnItemHoveredWhenDetailsPaneIsOpenRefVar.current = true
             debounce(() => {
-                if (isAnItemHoveredWhenDetailsPaneIsOpen.current) {
+                if (isAnItemHoveredWhenDetailsPaneIsOpenRefVar.current) {
                     setCurrentlyDisplayedMovieDetailsMovie(movie)
                 }
-            }, debounceTimer, 250)
+            }, debounceTimerRefVar.current, 250)
         }
     }
 
     function handleItemHoveredOut() {
-        isAnItemHoveredWhenDetailsPaneIsOpen.current = false
+        isAnItemHoveredWhenDetailsPaneIsOpenRefVar.current = false
     }
 
     function handleOnMovieDetailsClick(rowTitle, movie) {
@@ -58,17 +58,19 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
         // This does not return accurate sizes unless we wait at least 100ms before measuring.
         debounce(() => {
             if (detailsPaneRef.current) {
-                detailsPaneRectRef.current = detailsPaneRef.current.getBoundingClientRect()
-                detailsPaneRectRef.current.height = convertVwToPixels(ROW_DETAILS_HEIGHT)
+                detailsPaneRectRefVar.current = detailsPaneRef.current.getBoundingClientRect()
+                detailsPaneRectRefVar.current.height = convertVwToPixels(ROW_DETAILS_HEIGHT)
             }
-        }, debounceTimer, 200)
+        }, debounceTimerRefVar.current, 200)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(function scrollToMiddleOfDetailsPane() {
-        if (isDetailsPaneOpen && detailsPaneRef.current) {
-            window.scrollTo({ top: detailsPaneRectRef.current.top - detailsPaneRectRef.current.height / 2, behavior: 'smooth'})
-        }
+        debounce(() => {
+            if (isDetailsPaneOpen && detailsPaneRef.current) {
+                window.scrollTo({ top: detailsPaneRectRefVar.current.top - detailsPaneRectRefVar.current.height / 3, behavior: 'smooth'})
+            }
+        }, debounceTimerRefVar.current, 100)
     }, [isDetailsPaneOpen])
 
     return (
