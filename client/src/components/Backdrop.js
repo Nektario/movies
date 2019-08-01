@@ -1,12 +1,12 @@
 import React from 'react'
 import * as config from '../config'
 
-function Backdrop(props) {
-    const url = config.BACKDROP_URL + props.src
+function Backdrop({ src, className, alt, ...rest}) {
+    const url = config.BACKDROP_URL + src
     
     return (
-        <div className={'backdrop ' + props.className}>
-            <img src={url} alt='backdrop' />
+        <div className={'backdrop ' + className}>
+            <img src={url} alt={alt ? alt : 'backdrop'} {...rest} />
         </div>
     )
 }
