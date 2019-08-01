@@ -11,9 +11,6 @@
     padding: 0 $slider-padding;
     white-space: nowrap;
 }
-.nothing {
-    white-space: nowrap;
-}
 
 .slider-item:hover {
     //transform: scale(1.2) translateX(0);
@@ -22,33 +19,8 @@
     //transition: transform $transition-duration ease $transition-delay;
 }
 
-// .slide-left,
-// .slide-left-double {
-//     transform: translateX(-10%);
-//     transition: transform $transition-duration ease $transition-delay;
-// }
-// .slide-left-double {
-//     transform: translateX(-20%);
-// }
-// .slide-right,
-// .slide-right-double {
-//     transform: translateX(10%);
-//     transition: transform $transition-duration ease $transition-delay;
-// }
-// .slide-right-double {
-//     transform: translateX(20%);
-// }
-
 .slider-item {
-    padding: 2px 2px;
-}
-// .slider-item:first-child {
-//     padding: 0 2px 0 0;
-// }
-// .slider-item:last-child {
-//     padding: 0 0 0 2px
-// }
-.slider-item {
+    padding: 2px;
     display: inline-block;
 
     @media screen and (min-width: 1400px) {
@@ -82,18 +54,26 @@
 
 button {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 0;
     bottom: 0;
     width: $slider-padding;
-    height: 100%;
     z-index: 40;
-    background-color: rgba(20, 20, 20, .5);
-    background-color: rgba(255,255,255,.5);
-    border: 0px;
+    //background-color: rgba(20, 20, 20, .5);
+    background-color: rgba(20, 20, 20,.3);
+    border: 0;
     outline: 0;
     padding: 0;
     margin: 0;
+    font-size: 4vw;
+    font-weight: 600;
+    color: #999;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(20, 20, 20, .8);
+        color: #ddd;
+    }
 }
 .leftbutton {
     left: 0;
