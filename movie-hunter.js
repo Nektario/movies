@@ -12,25 +12,30 @@ function sleep(ms) {
 async function execute() {
     let page = 0
 
-    const popularMovies = new Set([401981, 383498])
-    while (page <= 6) {
+    const popularMovies = new Set([401981, 383498, 284053, 458156])
+    while (page <= 10) {
         page++
 
         if (page > 1) {
             await sleep(5000)
         }
         
-        const response = await axios.get(movieListUrl + '&page=' + page)
-        const resultMovies = response.data.results
-        for (const movie of resultMovies) {
-            popularMovies.add(movie.id)
-        }
+        try {
+            const response = await axios.get(movieListUrl + '&page=' + page)
+            const resultMovies = response.data.results
+            for (const movie of resultMovies) {
+                popularMovies.add(movie.id)
+            }
+        } catch (e) {
+            console.log('Failed to get movieList', e)
+        } 
     }
 
     // remove some movies that we don't want
     popularMovies.delete(537915) // After
     popularMovies.delete(332562) // A star is born
     popularMovies.delete(454983) // Kissing Booth
+    popularMovies.delete(487558)
 
     const movies = []
     for (const movie of popularMovies) {
@@ -59,7 +64,14 @@ function parseMovie(movieData) {
     const backdrops = movieData.images.backdrops.slice(0, 5).map(img => img.file_path) 
     const posters = movieData.images.posters.slice(0, 5).map(img => img.file_path)
     const cast = movieData.credits.cast.slice(0, 5).map(item => ({ profile_path: item.profile_path, character: item.character, name: item.name })) 
-    const crew = movieData.credits.cast.slice(0, 5).map(item => ({ profile_path: item.profile_path, job: item.job, name: item.name })) 
+    const crew = movieData.credits.crew
+        .slice(0, 5)
+        .filter(item => 
+            item.job.toLowerCase().indexOf('producer') >= 0 ||
+            item.job.toLowerCase().indexOf('director') >= 0 ||
+            item.job.toLowerCase().indexOf('screenplay') >= 0
+        )
+        .map(item => ({ profile_path: item.profile_path, job: item.job, name: item.name })) 
 
     movieData.images.posters = posters
     movieData.poster = posters[0] ? posters[0].file_path : ''
