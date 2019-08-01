@@ -7,7 +7,7 @@ import VideoReplayButton from './VideoReplayButton'
 import Backdrop from './Backdrop'
 import MovieLogo from './MovieLogo'
 import RatedBar from './RatedBar'
-import Transition from './Transition'
+import CrossfadeChildren from './animations/CrossfadeChildren'
 import ConditionalRenderFade from './ConditionalRenderFade'
 import * as config from '../config'
 import './Feature.scss'
@@ -75,7 +75,7 @@ function Feature(props) {
             </div>
 
             {/* These are absolutely positioned */}
-            <Transition showFirstChild={showPoster}>
+            <CrossfadeChildren toggle={showPoster}>
                 <Backdrop
                     src={props.movie.backdrop_path}
                     className='feature-poster'
@@ -91,9 +91,11 @@ function Feature(props) {
                     path={config.FEATURE_VIDEO_URL + '/' + props.movie.featureTrailer.name}
                     mimeType={props.movie.featureTrailer.mimeType}
                 />
-            </Transition>
+            </CrossfadeChildren>
         </div>
     )
 }
+
+
 
 export default Feature

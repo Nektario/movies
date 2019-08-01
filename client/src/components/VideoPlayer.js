@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import usePersistentState from '../hooks/usePersistentState'
-import Transition from './Transition'
+import CrossfadeChildren from './animations/CrossfadeChildren'
 import VideoReplayButton from './VideoReplayButton'
 import RatedBar from './RatedBar'
 import VideoVolumeButton from './VideoVolumeButton'
@@ -57,6 +57,10 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
         }
     }, [shouldPlay])
 
+    function randomKey() {
+        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+    
     return (
         <div className='video-player' onClick={togglePlayState}>
             <video
@@ -79,10 +83,14 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
             
             {/* This is absolutely positioned */}
             <div className='video-controls'>
-                <Transition speed='fast' showFirstChild={isVideoEnded}>
+                <CrossfadeChildren speed='fast' toggle={isVideoEnded}>
+                <div id={randomKey()}>
                     <VideoReplayButton onClick={handleVideoReplayClick} />
+                    </div>
+                    <div id={randomKey()}>
                     <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
-                </Transition>
+                    </div>
+                </CrossfadeChildren>
             </div>
         </div>
     )
