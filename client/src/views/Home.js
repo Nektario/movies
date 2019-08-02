@@ -1,4 +1,6 @@
-import React, { useReducer, useRef, useState } from 'react'
+import React, { useReducer, useContext, useState } from 'react'
+import MyListContext from '../MyListContext'
+import usePersistentState from '../hooks/usePersistentState'
 import { useTransition, animated, config } from 'react-spring'
 import Header from '../Header'
 import Movie from '../Movie'
@@ -57,13 +59,37 @@ function Home(props) {
         movieFilters: MovieFilters()
     })
     const [currentlyOpenedMovieDetailsRow, setCurrentlyOpenedMovieDetailsRow] = useState()
+    const myList = useContext(MyListContext)
+    const rows = [
+        {
+            title: 'My List',
+            movies: props.allMovies
+                .filter(movie => myList.has(movie))
+                .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+        },
+        {
+            title: 'New Releases',
+            movies: props.allMovies
+                .filter(movie => moment(movie.release_date) >= moment().subtract(2, 'year'))
+                .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+        },
+        {
+            title: 'Kids',
+            movies: props.allMovies
+                .filter(movie => movie.rated === 'G' || (movie.genres.includes('Animation') && (movie.rated === 'G' || movie.rated === 'PG')))
+        },
+        {
+            title: 'Comedies',
+            movies: props.allMovies
+                .filter(movie => movie.genres.includes('Comedy'))
+        }
+    ]
 
     function toggleMovieDetailsVisibility(titleOfClickedRow, clickedMovie) {
         if (titleOfClickedRow === currentlyOpenedMovieDetailsRow) {
             setCurrentlyOpenedMovieDetailsRow('')
         } else {
             setCurrentlyOpenedMovieDetailsRow(titleOfClickedRow)
-            //setCurrentlyDisplayedMovieDetailsMovie(clickedMovie)
         }
     }
 
@@ -90,40 +116,23 @@ function Home(props) {
             </div> */}
 
             <div id='feature'>
-                <Feature 
+                <Feature
                     movie={props.feature}
                 />
                 <div className='bottom-fader'></div>
             </div>
 
             <main>
-                <MovieSliderRow
-                    rowTitle='New Releases'
-                    onMovieDetailsClick={(title, movie) => toggleMovieDetailsVisibility(title, movie)}
-                    shouldOpen={currentlyOpenedMovieDetailsRow === 'New Releases'}
-                    movies={
-                        props.allMovies
-                            .filter(movie => moment(movie.release_date) >= moment().subtract(2, 'year'))
-                            .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
-                }/>
-
-                <MovieSliderRow
-                    rowTitle='Kids'
-                    onMovieDetailsClick={(title, movie) => toggleMovieDetailsVisibility(title, movie)}
-                    shouldOpen={currentlyOpenedMovieDetailsRow === 'Kids'}
-                    movies={
-                        props.allMovies
-                            .filter(movie => movie.rated === 'G' || (movie.genres.includes('Animation') && (movie.rated === 'G' || movie.rated === 'PG')))
-                }/>
-
-                <MovieSliderRow
-                    rowTitle='Comedies'
-                    onMovieDetailsClick={(title, movie) => toggleMovieDetailsVisibility(title, movie)}
-                    shouldOpen={currentlyOpenedMovieDetailsRow === 'Comedies'}
-                    movies={
-                        props.allMovies
-                            .filter(movie => movie.genres.includes('Comedy'))
-                }/>
+            {/* { rows.filter(row => row.movies.length > 0).map(row =>  */}
+                { rows.map(row => 
+                    <MovieSliderRow
+                        key={row.title}
+                        rowTitle={row.title}
+                        onMovieDetailsClick={(title, movie) => toggleMovieDetailsVisibility(title, movie)}
+                        shouldOpen={currentlyOpenedMovieDetailsRow === row.title}
+                        movies={row.movies}
+                    />)
+                }
             </main>
         </div>
     )
