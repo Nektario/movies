@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function usePersistentState(key, initialState = undefined) {
-    const valueInLocalStorage = getFromLocalStorage(key)
-    const [state, setState] = useState(valueInLocalStorage !== null ? valueInLocalStorage : initialState)
+    const valueInLocalStorage = useRef()
+    valueInLocalStorage.current = getFromLocalStorage(key)
+    const [state, setState] = useState(valueInLocalStorage.current !== undefined ? valueInLocalStorage.current : initialState)
     
     useEffect(() => {
         saveToLocalStorage(key, state)
@@ -17,14 +18,15 @@ function saveToLocalStorage(key, value) {
 
 function getFromLocalStorage(key) {
     const value = localStorage.getItem(key)
-    if (!value) {
-        return null
+
+    if (value === null || value === undefined) {
+        return undefined
     }
 
     try {
         return JSON.parse(value)
     } catch (e) {
-        return null
+        return undefined
     }
 }
 
