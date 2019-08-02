@@ -1,14 +1,14 @@
 import React from 'react'
 import ConditionalRender from './ConditionalRender'
 
-function ConditionalRenderFade(props) {
+function ConditionalRenderFade({ children, shouldShow, ...rest }) {
     return (
-        <ConditionalRender {...props} transitions={{
+        <ConditionalRender {...rest} toggle={shouldShow} transitions={{
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 }
         }}>
-            { props.children }
+            { children }
         </ConditionalRender>
     )
 

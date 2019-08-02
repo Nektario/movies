@@ -13,11 +13,31 @@ function ConditionalRender(props) {
     else if (props.behavior === 'fast') transitionStyle.config = { duration: 100 }
     else transitionStyle.config = config.default
     
-    const transitions = useTransition(props.shouldShow, null, transitionStyle)
+    const transitions = useTransition(props.toggle, null, transitionStyle)
 
     return transitions.map(({ item: shouldShow, props: styleProps }) => 
         shouldShow && <animated.div className={props.className} style={styleProps} key={key || 0}>{ props.children }</animated.div>
     )
 }
+
+// This is the correct way
+// function ConditionalRender(props) {
+//     const transitionStyle = props.transitions
+//     const key = props.id
+    
+//     if (props.behavior === 'molasses') transitionStyle.config = config.molasses
+//     else if (props.behavior === 'slow') transitionStyle.config = config.slow
+//     else if (props.behavior === 'stiff') transitionStyle.config = config.stiff
+//     else if (props.behavior === 'wobbly') transitionStyle.config = config.wobbly
+//     else if (props.behavior === 'gentle') transitionStyle.config = config.gentle
+//     else if (props.behavior === 'fast') transitionStyle.config = { duration: 100 }
+//     else transitionStyle.config = config.default
+    
+//     const transitions = useTransition(props.toggle, key, transitionStyle)
+
+//     return transitions.map(({ item: shouldShow, props: styleProps, key }) => 
+//         shouldShow && <animated.div className={props.className} style={styleProps} key={key || 0}>{ props.children }</animated.div>
+//     )
+// }
 
 export default ConditionalRender
