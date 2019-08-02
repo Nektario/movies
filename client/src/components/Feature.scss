@@ -56,6 +56,15 @@
             .btn:focus {
                 color: $background;
             }
+
+            .my-list-icon {
+                position: absolute;
+                left: 1.6vw;
+            }
+            
+            .my-list-text {
+                margin-left: 1.1vw;
+            }
         }
 
         .feature-info {
