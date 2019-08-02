@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, createRef } from 'react'
+import React, { useState, useRef, useEffect, createRef, useLayoutEffect } from 'react'
 import useMeasureSlider from './useMeasureSlider'
 import { useSpring, animated } from 'react-spring'
 import './Slider.scss'
@@ -8,12 +8,14 @@ function Slider(props) {
     const [transforms, setTransforms] = useState({})
     const [scrollDistance, setScrollDistance] = useState(0)
     const [currentScrollPage, setCurrentScrollpage] = useState(1)
+    const [wasNewItemAdded, setWasNewItemAdded] = useState() // need to trigger a re-render if new items are added to the slider in order to update the refs
     const { sliderPadding, sliderWidth, numItemsPerPage, refCallback } = useMeasureSlider(true)
     const slideAnimationProps = useSpring({ transform: `translateX(${scrollDistance}px)`})
+    const sliderId = 'slider-' + props.id
 
     // IntersectionObserver
     const intersectionObserverOptions = {
-        root: document.querySelector('.slider'),
+        root: document.getElementById(sliderId),
         rootMargin: '100%',
         threshold: '0'
     }
@@ -36,11 +38,17 @@ function Slider(props) {
         }, intersectionObserverOptions)
     }
     
-    useEffect(function setupItemRefs() {
-        if (props.items) props.items.forEach((item, i) => {
-            intersectionObserver.current.observe(sliderItemRefs.current[i].current)
-        })
-
+    useLayoutEffect(function setupItemRefs() {
+        if (props.items) {
+            props.items.forEach((item, i) => {
+                if (sliderItemRefs.current[i]) {
+                    intersectionObserver.current.observe(sliderItemRefs.current[i].current)
+                } else {
+                    sliderItemRefs.current[i] = createRef()
+                    setWasNewItemAdded(Math.random()+'')
+                }
+            })
+        }
     }, [props.items])
 
     useEffect(function onSliderMeasurementsChanged() {
@@ -55,6 +63,10 @@ function Slider(props) {
             handleHoverOut()
         }
     }, [props.isDetailsPaneOpen])
+
+    useEffect(function disableIntersectionObserver() {
+        return () => intersectionObserver.current.disconnect()
+    }, [])
     
 
     function handlePreviousButtonClick() {
@@ -134,7 +146,7 @@ function Slider(props) {
 
     return (
         <div className='slider-wrapper'>
-            <animated.div className='slider' style={slideAnimationProps} ref={refCallback}>
+            <animated.div className='slider' id={sliderId} style={slideAnimationProps} ref={refCallback}>
                 { props.items.map((item, i) => {
                     // Items that we need to shift left and/or right
                     const translateXStyles = transforms[i] ? transforms[i] : ''
