@@ -60,19 +60,28 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
             if (detailsPaneRef.current) {
                 detailsPaneRectRefVar.current = detailsPaneRef.current.getBoundingClientRect()
                 detailsPaneRectRefVar.current.height = convertVwToPixels(ROW_DETAILS_HEIGHT)
+                //console.log('Measured', rowTitle, detailsPaneRectRefVar.current)
             }
         }, debounceTimerRefVar.current, 200)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [movies])
 
     useEffect(function scrollToMiddleOfDetailsPane() {
         debounce(() => {
             if (isDetailsPaneOpen && detailsPaneRef.current) {
-                window.scrollTo({ top: detailsPaneRectRefVar.current.top - detailsPaneRectRefVar.current.height / 3, behavior: 'smooth'})
+                const fullPageHeight = document.body.scrollHeight
+                const detailsPaneScrollTop = detailsPaneRectRefVar.current.top - detailsPaneRectRefVar.current.height / 3
+                const scrollTo = fullPageHeight - detailsPaneScrollTop <= 150 ? fullPageHeight + 450 : detailsPaneScrollTop
+                //console.log('scrolling to', scrollTo, document.body.scrollHeight)
+                //window.scrollTo({ top: scrollTo, behavior: 'smooth'})
+                detailsPaneRef.current.scrollIntoView({behavior: "smooth", block: "center"})
             }
-        }, debounceTimerRefVar.current, 100)
+        }, debounceTimerRefVar.current, 300)
     }, [isDetailsPaneOpen])
 
+    if (movies.length === 0) {
+        return null
+    }
+    
     return (
         <div className='row' key={rowTitle}>
             <div className='row-header'>
@@ -80,6 +89,7 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
             </div>
 
             <Slider 
+                id={rowTitle.replace(/\s+/ig, '')}
                 items={movies}
                 isDetailsPaneOpen={isDetailsPaneOpen}
                 onItemHovered={handleItemHovered}
@@ -94,7 +104,7 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
             } />
 
             <div ref={detailsPaneRef}>
-                <ConditionalRender shouldShow={isDetailsPaneOpen} transitions={{
+                <ConditionalRender toggle={isDetailsPaneOpen} transitions={{
                     from: { height: '0vw', opacity: 0 },
                     enter: { height: ROW_DETAILS_HEIGHT, opacity: 1 },
                     leave: { height: '0vw', opacity: 0, },
@@ -127,10 +137,10 @@ function MovieSliderRowDetails(props) {
     return (
         <div className='row-details' style={{ height: ROW_DETAILS_HEIGHT }}>
             <div className='row-details-left'>
-                <ConditionalRender className='row-details-left-anim-container' key={'row-details-left' + movie.uid} shouldShow={props.shouldShow} transitions={{
+                <ConditionalRender className='row-details-left-anim-container' key={'row-details-left' + movie.uid} toggle={props.shouldShow} transitions={{
                     from: { opacity: 0, transform: 'translateX(5%)' },
                     enter: { opacity: 1, transform: 'translateX(0)' },
-                    leave: { opacity: 0, transform: 'translateX(-50%)' },
+                    //leave: { opacity: 0, transform: 'translateX(-50%)' },
                 }}>
                     <div className='section'>
                         <div className='title'>{ title }</div>
