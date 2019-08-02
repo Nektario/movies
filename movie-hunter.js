@@ -13,7 +13,7 @@ async function execute() {
     let page = 0
 
     const popularMovies = new Set([401981, 383498, 284053, 458156])
-    while (page <= 10) {
+    while (page <= 20) {
         page++
 
         if (page > 1) {
@@ -36,7 +36,8 @@ async function execute() {
     popularMovies.delete(332562) // A star is born
     popularMovies.delete(454983) // Kissing Booth
     popularMovies.delete(487558)
-
+    popularMovies.delete(514999) // Murder Mystery
+    
     const movies = []
     for (const movie of popularMovies) {
         if (movies.length % 20 === 0) {
