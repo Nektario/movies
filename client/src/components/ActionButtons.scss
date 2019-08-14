@@ -1,0 +1,18 @@
+@import '../variables';
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    
+    .btn {
+        color: white;
+        white-space: nowrap;
+        font-size: 1.1vw;
+        width: 49%;
+        height: 2.5vw;
+    }
+
+    .my-list-text {
+        margin-left: 1.2vw;
+    }
+}

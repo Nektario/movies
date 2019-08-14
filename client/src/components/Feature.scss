@@ -41,30 +41,14 @@
         }
 
         .feature-buttons {
-            display: flex;
-            justify-content: space-between;
-    
-            .btn {
-                white-space: nowrap;
-                font-size: 1.1vw;
-                width: 49%;
-                height: 2.5vw;
-            }
     
             .btn:hover,
             .btn:active,
             .btn:focus {
                 color: $background;
+                background-color: #eee;
             }
 
-            .my-list-icon {
-                position: absolute;
-                left: 1.6vw;
-            }
-            
-            .my-list-text {
-                margin-left: 1.1vw;
-            }
         }
 
         .feature-info {

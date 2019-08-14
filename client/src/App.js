@@ -36,7 +36,7 @@ const featuredMovies = [
 
 function App() {
     const [allMovies, setAllMovies] = useState([])
-    const [myList, setMyList] = usePersistentState(useState([]))
+    const [myList, setMyList] = usePersistentState('my-list', [])
     const MyList = {
         list: myList,
         update: handleMyListUpdate,
@@ -73,12 +73,16 @@ function App() {
     }
 
     function isMovieInMyList(movie) {
-        for (const myListMovie of myList) {
-            if (myListMovie.uid === movie.uid) {
-                return true
+        if (movie) {
+            for (const myListMovie of myList) {
+                if (myListMovie && myListMovie.uid === movie.uid) {
+                    return true
+                }
             }
         }
+        
         return false
+        //return myList.filter(myListItem => myListItem.uid === movie.uid).length > 0
     }
 
     if (allMovies.length === 0) {

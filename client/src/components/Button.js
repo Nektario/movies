@@ -3,7 +3,7 @@ import './Button.scss'
 
 
 function Button(props) {
-    const { type, kind, isLoading, onClick, children, disabled, ...rest } = props
+    const { type, kind, isLoading, onClick, children, disabled, className, ...rest } = props
 
     let classes = 'btn'
     
@@ -21,6 +21,10 @@ function Button(props) {
 
     if (disabled) {
         classes += ' btn-disabled'
+    }
+
+    if (className) {
+        classes += ' ' + className
     }
 
     function handleOnClick(event) {

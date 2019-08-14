@@ -2,6 +2,7 @@ import React, { useRef, useState, useLayoutEffect, useEffect } from 'react'
 import Movie from '../Movie'
 import Slider from '../components/Slider/Slider'
 import Backdrop from '../components/Backdrop'
+import ActionButtons from '../components/ActionButtons'
 import ConditionalRender from '../components/ConditionalRender'
 import CrossfadeItems from './animations/CrossfadeItems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -157,7 +158,13 @@ function MovieSliderRowDetails(props) {
                         { new Date(movie.release_date).getFullYear() } &bull; { convertMinsToHours(movie.runtime) } &bull; { movie.genres.slice(0, 3).join(', ') }
                     </div>
                     
-                    <div className='plot'>{ movie.overview }</div>
+                    <div className='section'>
+                        <ActionButtons playKind='contained' myListKind='outlined' movie={movie} />
+                    </div>
+
+                    <div className='plot'>
+                        { movie.overview }
+                    </div>
 
                     <div className='credits'>
                         <div>{ movie.credits.cast.slice(0, 3).map(cast => cast.name).join(', ') }</div>

@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react'
 import MyListContext from '../MyListContext'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPlus, faCheck } from '@fortawesome/free-solid-svg-icons'
-import Button from './Button'
+import ActionButtons from './ActionButtons'
 import VideoPlayer from './VideoPlayer'
 import VideoReplayButton from './VideoReplayButton'
 import Backdrop from './Backdrop'
 import MovieLogo from './MovieLogo'
 import RatedBar from './RatedBar'
 import CrossfadeChildren from './animations/CrossfadeChildren'
-import AnimateChildren from './animations/AnimateChildren'
 import ConditionalRenderFade from './ConditionalRenderFade'
 import * as config from '../config'
 import './Feature.scss'
@@ -53,23 +50,7 @@ function Feature(props) {
                 </div>
                 
                 <div className='feature-buttons'>
-                    <Button>
-                        <FontAwesomeIcon icon={faPlay} className='button-icon' />
-                        <span>Play</span>
-                    </Button>
-
-                    <Button onClick={() => handleMyListClick(props.movie)}>
-                        <AnimateChildren toggle={myList.has(props.movie)} transitions={{
-                            from: { opacity: 1, transform: 'scale(1)' },
-                            enter: { opacity: 1, transform: 'scale(1)' },
-                            leave: { opacity: 0, transform: 'scale(1.6)' },
-                        }
-                        }>
-                            <FontAwesomeIcon icon={faCheck} className='button-icon my-list-icon' fixedWidth />
-                            <FontAwesomeIcon icon={faPlus} className='button-icon my-list-icon' fixedWidth />
-                        </AnimateChildren>
-                        <span className='my-list-text'>My List</span>
-                    </Button>
+                    <ActionButtons playKind='contained' myListKind='contained' movie={props.movie} />
                 </div>
 
                 <div className='feature-info'>
