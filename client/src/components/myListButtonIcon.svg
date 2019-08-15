@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg"  className="my-list-button-icon">
+    <path d="M19 13H5v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M12 12V5M12 12v7" className='my-list-button-icon-stroke' strokeWidth="2"/>
+    <path d="M4.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M43 13H29v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M36 12V5M36 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="6.949528802064632,0.05047119793536714" strokeDashoffset="7"/>
+    <path d="M28.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M67 13H53v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M60 12V5M60 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="6.7703949336334155,0.22960506636658495" strokeDashoffset="7"/>
+    <path d="M52.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M91 13H77v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M84 12V5M84 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="6.404261628761139,0.5957383712388608" strokeDashoffset="7"/>
+    <path d="M76.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M115 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M108 12V5M108 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="5.77382191722263,1.2261780827773698" strokeDashoffset="7"/>
+    <path d="M100.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M139 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M132 12V5M132 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="4.850018109537778,2.149981890462222" strokeDashoffset="7"/>
+    <path d="M124.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M163 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M156 12V5M156 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="3.7992378212818996,3.2007621787181004" strokeDashoffset="7"/>
+    <path d="M148.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M187 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M180 12V5M180 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="2.8672742296835234,4.132725770316477" strokeDashoffset="7"/>
+    <path d="M172.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M211 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M204 12V5M204 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="2.1333561224830953,4.866643877516905" strokeDashoffset="7"/>
+    <path d="M196.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <path d="M235 13h-14v-2h14v2z" className='my-list-button-icon-fill'/>
+    <path d="M228 12V5M228 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="1.5710708221866159,5.428929177813385" strokeDashoffset="7"/>
+    <path d="M220.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    <g>
+        <path d="M259 12.999l-13.999.002v-2L259 10.999v2z" className='my-list-button-icon-fill'/>
+        <path d="M252 12V5M252 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="1.14007847437602,5.85992152562398" strokeDashoffset="7"/>
+        <path d="M244.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M283.02 12.941l-13.98.118v-2.008l13.966-.105.014 1.995z" className='my-list-button-icon-fill'/>
+        <path d="M276 12V5M276 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.808739127777527,6.191260872222473" strokeDashoffset="7"/>
+        <path d="M268.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M307.078 12.765l-13.922.47v-2.033l13.867-.414.055 1.977z" className='my-list-button-icon-fill'/>
+        <path d="M300 12V5M300 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.5545695159945394,6.445430484005461" strokeDashoffset="7"/>
+        <path d="M292.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M331.193 12.42l-13.806 1.16V11.5l13.67-1.023.136 1.943z" className='my-list-button-icon-fill'/>
+        <path d="M324 12V5M324 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.3616457861181537,6.638354213881846" strokeDashoffset="7"/>
+        <path d="M316.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M355.387 11.838l-13.612 2.324v-2.161l13.339-2.049.273 1.886z" className='my-list-button-icon-fill'/>
+        <path d="M348 12V5M348 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.21846082511445808,6.781539174885542" strokeDashoffset="7"/>
+        <path d="M340.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M379.662 11.014l-13.338 3.972v-2.275l12.871-3.502.467 1.805z" className='my-list-button-icon-fill'/>
+        <path d="M372 12V5M372 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.11648955038754749,6.883510449612452" strokeDashoffset="7"/>
+        <path d="M364.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M403.961 10.118l-13.04 5.764v-2.399l12.362-5.081.678 1.716z" className='my-list-button-icon-fill'/>
+        <path d="M396 12V5M396 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.049261287181062485,6.9507387128189375" strokeDashoffset="7"/>
+        <path d="M388.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M428.218 9.346l-12.782 7.308v-2.505l11.923-6.444.859 1.641z" className='my-list-button-icon-fill'/>
+        <path d="M420 12V5M420 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.011755479751697995,6.988244520248302" strokeDashoffset="7"/>
+        <path d="M412.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M452.419 8.743l-12.581 8.514v-2.588l11.581-7.508 1 1.582z" className='my-list-button-icon-fill'/>
+        <path d="M444 12V5M444 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M436.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M476.573 8.281l-12.427 9.438v-2.653l11.318-8.321 1.109 1.536z" className='my-list-button-icon-fill'/>
+        <path d="M468 12V5M468 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M460.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M500.691 7.927l-12.309 10.146v-2.701l11.117-8.947 1.192 1.502z" className='my-list-button-icon-fill'/>
+        <path d="M492 12V5M492 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M484.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M524.782 7.654l-12.218 10.692v-2.74l10.962-9.426 1.256 1.474z" className='my-list-button-icon-fill'/>
+        <path d="M516 12V5M516 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M508.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
+    </g>
+    <g>
+        <path d="M548.851 7.446l-12.148 11.108v-2.768l10.843-9.794 1.305 1.454z" className='my-list-button-icon-fill'/>
+        <path d="M540 12V5M540 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M532.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.062397036725945786,7.645391232291306" strokeDashoffset=".062397"/></g>
+    <g>
+        <path d="M572.904 7.288l-12.096 11.424v-2.79l10.754-10.073 1.342 1.439z" className='my-list-button-icon-fill'/>
+        <path d="M564 12V5M564 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M556.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.33324179423413613,7.3745464747831155" strokeDashoffset=".333242"/></g>
+    <g>
+        <path d="M596.943 7.171l-12.057 11.658v-2.806l10.687-10.279 1.37 1.427z" className='my-list-button-icon-fill'/>
+        <path d="M588 12V5M588 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M580.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0.9314677626773222,6.77632050633993" strokeDashoffset=".931468"/>
+    </g>
+    <g>
+        <path d="M620.97 7.089l-12.029 11.822v-2.817l10.64-10.424 1.389 1.419z" className='my-list-button-icon-fill'/>
+        <path d="M612 12V5M612 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M604.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="1.9869108566217277,5.720877412395524" strokeDashoffset="1.986911"/>
+    </g>
+    <g>
+        <path d="M644.988 7.035l-12.012 11.93v-2.826l10.611-10.517 1.401 1.413z" className='my-list-button-icon-fill'/>
+        <path d="M636 12V5M636 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M628.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="3.361079561348804,4.346708707668448" strokeDashoffset="3.36108"/>
+    </g>
+    <g>
+        <path d="M668.998 7.007l-12.003 11.986v-2.829l10.594-10.568 1.409 1.411z" className='my-list-button-icon-fill'/>
+        <path d="M660 12V5M660 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M652.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="4.60158666940456,3.1062015996126915" strokeDashoffset="4.601587"/>
+    </g>
+    <g>
+        <path d="M693 7l-12 12v-2.83l10.59-10.58L693 7z" className='my-list-button-icon-fill'/>
+        <path d="M684 12V5M684 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M676.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="5.533352803401966,2.1744354656152853" strokeDashoffset="5.533353"/>
+    </g>
+    <g>
+        <path d="M717 7l-12 12v-2.83l10.59-10.58L717 7z" className='my-list-button-icon-fill'/>
+        <path d="M708 12V5M708 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M700.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="6.209835575147309,1.497952693869943" strokeDashoffset="6.209836"/>
+    </g>
+    <g>
+        <path d="M741 7l-12 12v-2.83l10.59-10.58L741 7z" className='my-list-button-icon-fill'/>
+        <path d="M732 12V5M732 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M724.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="6.702429830661375,1.0053584383558773" strokeDashoffset="6.70243"/>
+    </g>
+    <g>
+        <path d="M765 7l-12 12v-2.83l10.59-10.58L765 7z" className='my-list-button-icon-fill'/>
+        <path d="M756 12V5M756 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M748.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.061349909900898,0.646438359116354" strokeDashoffset="7.06135"/>
+        </g>
+    <g>
+        <path d="M789 7l-12 12v-2.83l10.59-10.58L789 7z" className='my-list-button-icon-fill'/>
+        <path d="M780 12V5M780 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M772.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.319752403949448,0.3880358650678038" strokeDashoffset="7.319752"/>
+        </g>
+    <g>
+        <path d="M813 7l-12 12v-2.83l10.59-10.58L813 7z" className='my-list-button-icon-fill'/>
+        <path d="M804 12V5M804 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M796.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.499986995943646,0.20780127307360605" strokeDashoffset="7.499987"/>
+    </g>
+    <g>
+        <path d="M837 7l-12 12v-2.83l10.59-10.58L837 7z" className='my-list-button-icon-fill'/>
+        <path d="M828 12V5M828 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M820.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.61765693351953,0.09013133549772129" strokeDashoffset="7.617657"/>
+    </g>
+    <g>
+        <path d="M861 7l-12 12v-2.83l10.59-10.58L861 7z" className='my-list-button-icon-fill'/>
+        <path d="M852 12V5M852 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M844.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.684037602055514,0.02375066696173787" strokeDashoffset="7.684038"/>
+    </g>
+    <g>
+        <path d="M885 7l-12 12v-2.83l10.59-10.58L885 7z" className='my-list-button-icon-fill'/>
+        <path d="M876 12V5M876 12v7" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7" strokeDashoffset="7"/>
+        <path d="M868.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="7.7075297611878915,0.0002585078293605226" strokeDashoffset="7.70753"/>
+    </g>
+</svg>

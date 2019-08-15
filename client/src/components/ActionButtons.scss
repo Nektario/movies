@@ -11,8 +11,13 @@
         width: 49%;
         height: 2.5vw;
     }
+}
 
-    .my-list-text {
-        margin-left: 1.2vw;
-    }
+.my-list-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-list-button-icon {
+    width: 1.8vw;
 }

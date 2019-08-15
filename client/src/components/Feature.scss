@@ -41,7 +41,6 @@
         }
 
         .feature-buttons {
-    
             .btn:hover,
             .btn:active,
             .btn:focus {
@@ -49,7 +48,26 @@
                 background-color: #eee;
             }
 
+            // My List Button Icon
+            .my-list-button .my-list-button-icon-stroke {
+                stroke: #fff;
+            }
+            .my-list-button:hover .my-list-button-icon-stroke,
+            .my-list-button:active .my-list-button-icon-stroke,
+            .my-list-button:focus .my-list-button-icon-stroke {
+                stroke: $background;
+            }
+    
+            .my-list-button .my-list-button-icon-fill {
+                fill: #fff;
+            }
+            .my-list-button:hover .my-list-button-icon-fill,
+            .my-list-button:active .my-list-button-icon-fill,
+            .my-list-button:focus .my-list-button-icon-fill {
+                fill: $background;
+            }
         }
+
 
         .feature-info {
             color: white;

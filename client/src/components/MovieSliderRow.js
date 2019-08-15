@@ -7,8 +7,7 @@ import ConditionalRender from '../components/ConditionalRender'
 import CrossfadeItems from './animations/CrossfadeItems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
-import '../views/Home.scss'
-import '../views/RowDetails.scss'
+import './RowDetails.scss'
 
 const ROW_DETAILS_HEIGHT = '33vw'
 

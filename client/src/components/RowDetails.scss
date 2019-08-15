@@ -38,7 +38,6 @@
         background: linear-gradient(90deg, rgba(20,20,20,1) 35%, rgba(20,20,20,.1) 52%);
         
         .row-details-left-anim-container {
-            position: absolute;
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -136,6 +135,13 @@
                 &:active {
                     background-color: rgba(255, 255, 255, 0.25);
                 }
+            }
+            // My List Button Icon
+            .my-list-button .my-list-button-icon-stroke {
+                stroke: #fff;
+            }
+            .btn .my-list-button-icon-fill {
+                fill: #fff;
             }
         }
 

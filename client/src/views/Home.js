@@ -15,7 +15,6 @@ import ConditionalRenderFade from '../components/ConditionalRenderFade'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
 import './Home.scss'
-import './RowDetails.scss'
 
 const ROW_DETAILS_HEIGHT = '30vw'
 

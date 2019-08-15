@@ -1,34 +1,54 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useEffect, useState } from 'react'
+import { ReactComponent as Logo } from './myListButtonIcon.svg'
 import MyListContext from '../MyListContext'
 import Button from './Button'
-import AnimateChildren from './animations/AnimateChildren'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faCheck } from '@fortawesome/free-solid-svg-icons'
+
+const ICON_WIDTH = 24
+const ICON_HEIGHT = 24
+const ICON_NUM_FRAMES = 36
+
+function animateSvgIcon(durationMillis, numFrames, startFromBeginning, callback) {
+    let counter = startFromBeginning ? 1 : numFrames
+
+    let timer = setInterval(() => {
+        const newViewBoxX = ICON_WIDTH * counter
+        callback(newViewBoxX)
+
+        if (!startFromBeginning) {
+            if (counter === 1) {
+                clearInterval(timer)
+            }
+            counter--
+        } else {
+            if (counter === numFrames) {
+                clearInterval(timer)
+            }
+            counter++
+        }
+    }, durationMillis / numFrames)
+}
 
 function MyListButton(props) {
     const myList = useContext(MyListContext)
-    const isInMyList = myList.has(props.movie)
+    const [viewBoxX, setViewBoxX] = useState(myList.has(props.movie) ? ICON_WIDTH * ICON_NUM_FRAMES : 0)
+    const isFirstRunRef = useRef(true)
 
-    // checkmark needs to rotate 360degrees
-    const iconRotation = isInMyList ? 'rotate(360deg)' : 'rotate(180deg)'
-    const iconPosition = {
-        left: '1.6vw',
-        position: 'absolute'
-    }
+    useEffect(() => {
+        if (isFirstRunRef.current) {
+            isFirstRunRef.current = false
+            return
+        } 
+        
+        animateSvgIcon(250, ICON_NUM_FRAMES, myList.has(props.movie), setViewBoxX)
+    }, [myList, props.movie])
 
     return (
         <Button className='my-list-button' kind={props.kind} onClick={() => myList.update(props.movie)}>
-            <AnimateChildren toggle={isInMyList} transitions={{
-                initial: null,
-                from:  { opacity: 1, transform: 'rotate(0deg)', ...iconPosition },
-                enter: { opacity: 1, transform: iconRotation, ...iconPosition },
-                leave: { opacity: 0, transform: iconRotation, ...iconPosition }
-            }
-            }>
-                <FontAwesomeIcon icon={faCheck} fixedWidth />
-                <FontAwesomeIcon icon={faPlus} fixedWidth />
-            </AnimateChildren>
-            <span className='my-list-text'>My List</span>
+            <div className='my-list-button-icon-container'>
+                <Logo viewBox={`${viewBoxX} 0 ${ICON_WIDTH} ${ICON_HEIGHT}`}/>
+            </div>
+            
+            <div className='my-list-text'>My List</div>
         </Button>
     )
 }
