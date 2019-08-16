@@ -26,6 +26,23 @@ body {
     box-sizing: content-box;
 }
 
+.icon-hoverable {
+    color: #ccc;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 350ms;
+    transform-origin: center;
+    cursor: pointer;
+
+    &:hover {
+        color: #eee;
+        border: 2px solid #ddd;
+        transform: scale(1.05);
+        background-color: rgba(0, 0, 0, .6);
+    }
+}
+
 .no-select {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

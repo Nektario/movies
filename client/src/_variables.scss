@@ -11,6 +11,8 @@ $slider-padding: 3%;
 $background: #141414;
 $feature-height: 42vw;
 
+$color-accent: rgb(160, 93, 243);
+
 @mixin Elevation ($dp) {
     @if $dp==0 {
         box-shadow: none
@@ -44,6 +46,42 @@ $feature-height: 42vw;
     }
     @else if $dp==24 {
         box-shadow: 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12), 0 11px 15px -7px rgba(0, 0, 0, .20)
+    }
+    @else {
+        @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";
+    }
+}
+
+@mixin ElevationDark ($dp) {
+    @if $dp==0 {
+        background-color: none;
+    }
+    @else if $dp==1 {
+        background-color: rgba(255,255,255, .05);
+    }
+    @else if $dp==2 {
+        background-color: rgba(255,255,255, .07);
+    }
+    @else if $dp==3 {
+        background-color: rgba(255,255,255, .08);
+    }
+    @else if $dp==4 {
+        background-color: rgba(255,255,255, .09);
+    }
+    @else if $dp==6 {
+        background-color: rgba(255,255,255, .11);
+    }
+    @else if $dp==8 {
+        background-color: rgba(255,255,255, .12);
+    }
+    @else if $dp==12 {
+        background-color: rgba(255,255,255, .14);
+    }
+    @else if $dp==16 {
+        background-color: rgba(255,255,255, .15);
+    }
+    @else if $dp==24 {
+        background-color: rgba(255,255,255, .16);
     }
     @else {
         @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";

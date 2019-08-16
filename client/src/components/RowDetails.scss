@@ -107,33 +107,38 @@
             .my-list-button {
                 color: #dedede;
                 border-radius: 0;
-                @include Elevation(24);
             }
             .play-button {
-                background-color: rgb(255, 0, 0);
+                background-color: $color-accent;
                 
                 &:hover {
-                    background-color: rgb(220,0,0);
+                    //background-color: rgb(220,0,0);
+                    background-color: rgb(146, 65, 245);
                 }
                 &:focus {
-                    background-color: rgb(220,0,0);
+                    //background-color: rgb(220,0,0);
+                    background-color: rgb(146, 65, 245);
                 }
                 &:active {
-                    background-color: rgb(200,0,0);
+                    //background-color: rgb(200,0,0);
+                    background-color: rgb(146, 65, 245);
                 }
             }
             .my-list-button {
-                border: 1px solid #dedede;
+                border: 1px solid #aaa;
 
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.15);
+                    @include ElevationDark(4);
                 }
                 &:focus {
-                    background-color: rgba(110, 172, 228, 0.15)
+                    @include ElevationDark(8);
+                    //background-color: rgba(110, 172, 228, 0.15)
                     //background-color: rgba(255, 255, 255, .15)
+                    border-color: #ddd;
                 }
                 &:active {
-                    background-color: rgba(255, 255, 255, 0.25);
+                    //background-color: rgba(255, 255, 255, 0.25);
+                    @include ElevationDark(6);
                 }
             }
             // My List Button Icon

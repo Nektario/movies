@@ -81,7 +81,7 @@ function Actions({ shouldShow, onMovieDetailsClick }) {
                 {/* <FontAwesomeIcon icon={faMale} className='icon' fixedWidth />
                 <FontAwesomeIcon icon={faFemale} className='icon' fixedWidth />
                 <FontAwesomeIcon icon={faBaby} className='icon' fixedWidth /> */}
-                <FontAwesomeIcon icon={faInfo} className='icon' fixedWidth onClick={onMovieDetailsClick} />
+                <FontAwesomeIcon icon={faInfo} className='icon icon-hoverable' fixedWidth onClick={onMovieDetailsClick} />
             </div>
         )
     }
