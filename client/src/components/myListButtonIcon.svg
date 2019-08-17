@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg"  className="my-list-button-icon">
+<svg xmlns="http://www.w3.org/2000/svg" className="my-list-button-icon">
     <path d="M19 13H5v-2h14v2z" className='my-list-button-icon-fill'/>
     <path d="M12 12V5M12 12v7" className='my-list-button-icon-stroke' strokeWidth="2"/>
     <path d="M4.2 12.8l5.5 5.4" className='my-list-button-icon-stroke' strokeWidth="2" strokeDasharray="0,7.707788269017252" strokeDashoffset="7.707788"/>
