@@ -3,6 +3,7 @@ import Movie from '../Movie'
 import Slider from '../components/Slider/Slider'
 import Backdrop from '../components/Backdrop'
 import ActionButtons from '../components/ActionButtons'
+import UserRating from '../components/UserRating'
 import ConditionalRender from '../components/ConditionalRender'
 import CrossfadeItems from './animations/CrossfadeItems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -159,6 +160,7 @@ function MovieSliderRowDetails(props) {
                     
                     <div className='section'>
                         <ActionButtons playKind='contained' myListKind='outlined' movie={movie} />
+                        <UserRating movie={movie} />
                     </div>
 
                     <div className='plot'>

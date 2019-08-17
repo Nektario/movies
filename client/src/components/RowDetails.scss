@@ -102,6 +102,8 @@
 
         .action-buttons {
             width: 20vw;
+            float: left;
+            margin-right: 24px;
             
             .play-button,
             .my-list-button {
@@ -147,6 +149,23 @@
             }
             .btn .my-list-button-icon-fill {
                 fill: #fff;
+            }
+        }
+
+        .user-rating {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            .user-rating-icon-container {
+                height: 1.7vw;
+            }
+            
+            .user-rating-icon {
+                height: 100%;
+                stroke: yellow;
+                fill: transparent;
+                margin-right: .25vw;
             }
         }
 
