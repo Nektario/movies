@@ -1,3 +1,5 @@
+/* Download movie data from the TMDB api */
+
 const axios = require('axios')
 const dotenv = require('dotenv')
 dotenv.config()
@@ -12,6 +14,7 @@ function sleep(ms) {
 async function execute() {
     let page = 0
 
+    // These are some movies that we want to include even if they aren't returned by our API search
     const popularMovies = new Set([401981, 383498, 284053, 458156])
     while (page <= 20) {
         page++
@@ -32,11 +35,11 @@ async function execute() {
     }
 
     // remove some movies that we don't want
-    popularMovies.delete(537915) // After
-    popularMovies.delete(332562) // A star is born
-    popularMovies.delete(454983) // Kissing Booth
+    popularMovies.delete(537915)
+    popularMovies.delete(332562)
+    popularMovies.delete(454983)
     popularMovies.delete(487558)
-    popularMovies.delete(514999) // Murder Mystery
+    popularMovies.delete(514999)
     
     const movies = []
     for (const movie of popularMovies) {
