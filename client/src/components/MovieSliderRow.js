@@ -8,6 +8,7 @@ import ConditionalRender from '../components/ConditionalRender'
 import CrossfadeItems from './animations/CrossfadeItems'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
+import { convertMinsToHours } from '../util'
 import './RowDetails.scss'
 
 const ROW_DETAILS_HEIGHT = '33vw'
@@ -127,13 +128,6 @@ function MovieSliderRowDetails(props) {
     const movie = props.movie
     const [title, subtitle] = movie.title.split(': ')
     const rated = movie.rated ? movie.rated : 'NR'
-
-    function convertMinsToHours(minutes) {
-        const hours = Math.floor(minutes / 60)
-        const mins = minutes % 60
-
-        return `${hours > 0 ? hours + 'h ' : ''}${mins > 0 ? mins + 'm' : ''}`
-    }
 
     return (
         <div className='row-details' style={{ height: ROW_DETAILS_HEIGHT }}>

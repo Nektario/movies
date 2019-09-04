@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { ReactComponent as StarSvg } from './userRatingIcon.svg'
-import * as util from './util'
+import * as util from '../util'
 
 const ICON_SIZE = 24
 const ICON_NUM_FRAMES = 54

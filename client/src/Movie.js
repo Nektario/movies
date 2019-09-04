@@ -3,6 +3,7 @@ import * as config from './config'
 import './Movie.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfo } from '@fortawesome/free-solid-svg-icons'
+import { convertMinsToHours } from 'util'
 
 const POSTER_URL = config.POSTER_URL
 
@@ -46,13 +47,6 @@ const Movie = React.forwardRef(({ item: movie, shouldShowOverlay, className, onM
 })
 
 function Info({ shouldShow, movie }) {
-    function convertMinsToHours(minutes) {
-        const hours = Math.floor(minutes / 60)
-        const mins = minutes % 60
-    
-        return `${hours > 0 ? hours + 'h ' : ''}${mins > 0 ? mins + 'm' : ''}`
-    }
-
     if (shouldShow) {
         return (
             <div className='info'>

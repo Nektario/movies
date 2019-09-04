@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { ReactComponent as PlusToCheckSvg } from './myListButtonIcon.svg'
 import { useMyListDispatch, useMyListHelper } from '../my-list-context'
-import * as util from './util'
+import * as util from '../util'
 import Button from './Button'
 
 const ICON_SIZE = 24
