@@ -49,8 +49,6 @@ function Home(props) {
 
     return (
         <div className='home'>
-            <Header />
-
             <div id='feature'>
                 <Feature
                     movie={props.feature}

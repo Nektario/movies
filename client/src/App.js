@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { MyListProvider } from './my-list-context'
 import featuredMovies from './data/feature-movies'
+import Header from './components/Header'
 import Home from './views/Home'
+import Search from './views/Search'
 import axios from 'axios'
 
 function App() {
@@ -30,7 +33,14 @@ function App() {
 
     return (
         <MyListProvider>
-            <Home allMovies={allMovies} feature={featureMovie.current} />
+            <Router>
+                <Header />
+                <Switch>
+                    <Route path='/home' render={props => <Home {...props} allMovies={allMovies} feature={featureMovie.current} />} />
+                    <Route path='/search' component={Search} />
+                    <Route render={() => <Redirect to='/home' />} />
+                </Switch>
+            </Router>
         </MyListProvider>
     )
 }
