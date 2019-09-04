@@ -24,7 +24,7 @@ function convertVwToPixels(sizeInVw) {
     return (sizeInVw * width) / 100;
   }
 
-function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
+function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick, showRowTitle }) {
     const [currentlyDisplayedMovieDetailsMovie, setCurrentlyDisplayedMovieDetailsMovie] = useState()
     const detailsPaneRef = useRef()
     const detailsPaneRectRefVar = useRef()
@@ -86,10 +86,11 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick }) {
     
     return (
         <div className='row' key={rowTitle}>
+            { showRowTitle && 
             <div className='row-header'>
                 <div className='row-title'>{ rowTitle }</div>
             </div>
-
+            }
             <Slider 
                 id={rowTitle.replace(/\s+/ig, '')}
                 items={movies}
