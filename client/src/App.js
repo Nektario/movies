@@ -37,7 +37,7 @@ function App() {
                 <Header />
                 <Switch>
                     <Route path='/home' render={props => <Home {...props} allMovies={allMovies} feature={featureMovie.current} />} />
-                    <Route path='/search' component={Search} />
+                    <Route path='/search' component={props => <Search {...props} allMovies={allMovies} />} />
                     <Route render={() => <Redirect to='/home' />} />
                 </Switch>
             </Router>

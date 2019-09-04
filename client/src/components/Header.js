@@ -2,17 +2,25 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ReactComponent as SearchToCloseIconSvg } from './searchToCloseIcon.svg'
 import { animateSvgIcon } from '../util'
+import { withRouter } from 'react-router-dom'
 import './Header.scss'
 
 const ICON_SIZE = 24
 const ICON_NUM_FRAMES = 60
 const SEARCH_TO_CLOSE_ICON_ANIMATION_DURATION_MILLIS = 550
 
-function Header() {
+function Header(props) {
     const [isSearchInputExpanded, setIsSearchInputExpanded] = React.useState(false)
+    const [searchInputValue, setSearchInputValue] = React.useState('')
     const [viewBoxXStartPosition] = React.useState(isSearchInputExpanded ? ICON_SIZE * ICON_NUM_FRAMES : 0)
     const svgRef = React.useRef()
     const searchInputRef = React.useRef()
+
+    React.useEffect(function clearSearchInput() {
+        if (!isSearchInputExpanded) {
+            setSearchInputValue('')
+        }
+    }, [isSearchInputExpanded])
 
     function toggleSearchInputDisplay() {
         animateSvgIcon(SEARCH_TO_CLOSE_ICON_ANIMATION_DURATION_MILLIS, ICON_NUM_FRAMES, !isSearchInputExpanded, svgRef.current, ICON_SIZE)
@@ -28,6 +36,11 @@ function Header() {
         } else {
             searchInputRef.current.placeholder = ''
         }
+    }
+
+    function handleSubmitSearch(e) {
+        e.preventDefault()
+        props.history.push('/search?' + searchInputValue)
     }
 
     return (
@@ -48,9 +61,11 @@ function Header() {
                     <div className='header-text-item'>My List</div>
                 </div>
                 <div className='right'>
-                    <div className='search'>
+                    <form className='search' onSubmit={handleSubmitSearch}>
                         <input
                             type='text'
+                            value={searchInputValue}
+                            onChange={e => setSearchInputValue(e.target.value)}
                             ref={searchInputRef}
                             className={`search-input ${isSearchInputExpanded && 'search-input-expanded'}`}
                         />
@@ -60,11 +75,11 @@ function Header() {
                             onClick={toggleSearchInputDisplay}
                             className={`search-to-close-icon ${isSearchInputExpanded && 'search-to-close-icon-expanded'}`}
                         />
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     )
 }
 
-export default  Header
+export default  withRouter(Header)
