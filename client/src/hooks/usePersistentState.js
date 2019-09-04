@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 function usePersistentState(key, initialState = undefined) {
-    const valueInLocalStorage = useRef()
-    valueInLocalStorage.current = getFromLocalStorage(key)
-    const [state, setState] = useState(valueInLocalStorage.current !== undefined ? valueInLocalStorage.current : initialState)
+    const [state, setState] = useState(getFromLocalStorage(key) !== undefined ? getFromLocalStorage(key) : initialState)
     
     useEffect(() => {
         saveToLocalStorage(key, state)
