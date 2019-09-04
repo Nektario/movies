@@ -16,11 +16,19 @@ function Feature(props) {
     const [showPoster, setShowPoster] = useState(true)
     const [showInfo, setShowInfo] = useState(true)
     const [showReplayButton, setShowReplayButton] = useState(false)
+    const isMounted = React.useRef()
+
+    useEffect(() => {
+        isMounted.current = true
+        return () => isMounted.current = false
+    }, [])
 
     useEffect(() => {
         setTimeout(() => {
-            setShowInfo(false)
-            setShowPoster(false)
+            if (isMounted.current) {
+                setShowInfo(false)
+                setShowPoster(false)
+            }
         }, PLAY_VIDEO_DELAY_MILLIS)
     }, [])
 
