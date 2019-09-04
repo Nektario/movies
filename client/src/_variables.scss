@@ -10,8 +10,9 @@ $slider-padding: 3%;
 
 $background: #141414;
 $feature-height: 42vw;
+$header-height: 50px;
 
-$color-accent: rgb(160, 93, 243);
+$color-accent: #a05df3;
 
 @mixin Elevation ($dp) {
     @if $dp==0 {

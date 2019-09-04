@@ -1,0 +1,62 @@
+@import '../variables';
+
+.header {
+    height: $header-height;
+    position: relative;
+    z-index: 1;
+    
+    .header-content {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        
+        & * + * {
+            margin-right: 18px;
+            z-index: 3;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 28px;
+            padding: 4px 12px;
+            margin-right: 24px;
+            z-index: 3;
+
+            svg {
+                padding: 0;
+            }
+        }
+    }
+
+    .top-scrim {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        color: white;
+        align-items: center;
+        height: 200px;
+        background: linear-gradient(
+            hsla(0, 0%, 0%, .7) 0%,
+            hsla(0, 0%, 0%, 0.738) 10%,
+            hsla(0, 0%, 0%, 0.541) 30%,
+            hsla(0, 0%, 0%, 0.382) 47%,
+            hsla(0, 0%, 0%, 0.278) 56.5%,
+            hsla(0, 0%, 0%, 0.194) 65%,
+            hsla(0, 0%, 0%, 0.126) 73%,
+            hsla(0, 0%, 0%, 0.075) 80.2%,
+            hsla(0, 0%, 0%, 0.042) 86.1%,
+            hsla(0, 0%, 0%, 0.021) 91%,
+            hsla(0, 0%, 0%, 0.008) 95.2%,
+            hsla(0, 0%, 0%, 0.002) 98.2%,
+            hsla(0, 0%, 0%, 0) 100%
+        );
+    }
+}
+

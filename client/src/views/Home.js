@@ -2,7 +2,7 @@ import React, { useReducer, useContext, useState } from 'react'
 import MyListContext from '../MyListContext'
 import usePersistentState from '../hooks/usePersistentState'
 import { useTransition, animated, config } from 'react-spring'
-import Header from '../Header'
+import Header from '../components/Header'
 import Movie from '../Movie'
 import moment from 'moment'
 import MovieFilters from '../models/MovieFilters'
@@ -97,7 +97,7 @@ function Home(props) {
     }
 
     return (
-        <div>
+        <div className='home'>
             {/* <Header
                 dispatch={dispatch}
                 currentSort={state.currentSort}
@@ -105,6 +105,8 @@ function Home(props) {
                 totalMovies={state && state.allMovies.length}
                 displayedMovies={state.moviesToDisplay.length}
             /> */}
+
+            <Header />
 
             {/* <div className='video'>
                 <div className='video-background'>
