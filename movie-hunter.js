@@ -4,8 +4,25 @@ const axios = require('axios')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const API_KEY = process.env.TMDB_API_KEY
-const movieListUrl = 'https://api.themoviedb.org/3/discover/movie?language=en-US&with_original_language=en&sort_by=popularity.desc&include_adult=false&include_video=false&release_date.gte=2018-01-01&vote_count.gte=500&api_key=' + API_KEY
+const MOVIE_DISCOVER_NUM_PAGES = 20
+const MOVIE_DISCOVER_DELAY_BETWEEN_PAGES = 5000
+const MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY = 20
+const MOVIE_DETAILS_DELAY = 5000
+
+const TMDB_API_KEY = process.env.TMDB_API_KEY
+const TMDB_DISCOVER_MOVIE_BASE_URL = 'https://api.themoviedb.org/3/discover/movie?'
+const movieDiscoverParams = {
+    api_key: TMDB_API_KEY,
+    include_adult: 'false',
+    include_video: 'false',
+    language: 'en-US',
+    'release_date.gte': '2018-01-01',
+    sort_by: 'popularity.desc',
+    'vote_count.gte': 500,
+    with_original_language: 'en'
+}
+const movieDiscoverUrlParams = new URLSearchParams(Object.entries(movieDiscoverParams))
+const movieDiscoverUrl = TMDB_DISCOVER_MOVIE_BASE_URL + movieDiscoverUrlParams.toString()
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -16,16 +33,17 @@ async function execute() {
 
     // These are some movies that we want to include even if they aren't returned by our API search
     const popularMovies = new Set([401981, 383498, 284053, 458156])
-    while (page <= 20) {
+    while (page <= MOVIE_DISCOVER_NUM_PAGES) {
         page++
 
         if (page > 1) {
-            await sleep(5000)
+            await sleep(MOVIE_DISCOVER_DELAY_BETWEEN_PAGES)
         }
         
         try {
-            const response = await axios.get(movieListUrl + '&page=' + page)
+            const response = await axios.get(movieDiscoverUrl + '&page=' + page)
             const resultMovies = response.data.results
+
             for (const movie of resultMovies) {
                 popularMovies.add(movie.id)
             }
@@ -41,10 +59,11 @@ async function execute() {
     popularMovies.delete(487558)
     popularMovies.delete(514999)
     
+    // get movie details for each of the discovered movies
     const movies = []
     for (const movie of popularMovies) {
-        if (movies.length % 20 === 0) {
-            await sleep(5000)
+        if (movies.length % MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY === 0) {
+            await sleep(MOVIE_DETAILS_DELAY)
         }
 
         try {
