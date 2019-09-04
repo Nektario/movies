@@ -1,95 +1,95 @@
-/* Download movie data from the TMDB api */
+/* Download movie data from the TMDB api and output it to stdout */
 
 const axios = require('axios')
 const dotenv = require('dotenv')
 dotenv.config()
 
+const TMDB_API_KEY = process.env.TMDB_API_KEY
 const MOVIE_DISCOVER_NUM_PAGES = 20
 const MOVIE_DISCOVER_DELAY_BETWEEN_PAGES = 5000
 const MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY = 20
 const MOVIE_DETAILS_DELAY = 5000
-const TMDB_API_KEY = process.env.TMDB_API_KEY
 
-const TMDB_MOVIE_DISCOVER_BASE_URL = 'https://api.themoviedb.org/3/discover/movie?'
-const movieDiscoverParams = {
-    api_key: TMDB_API_KEY,
-    include_adult: 'false',
-    include_video: 'false',
-    language: 'en-US',
-    'release_date.gte': '2018-01-01',
-    sort_by: 'popularity.desc',
-    'vote_count.gte': 500,
-    with_original_language: 'en'
+function getPopularMovies() {
+    return new Promise(async resolve => {
+        const unwantedMovieIds = [537915, 332562, 454983, 487558, 514999]
+        const baseUrl = 'https://api.themoviedb.org/3/discover/movie?'
+        const searchParams = {
+            api_key: TMDB_API_KEY,
+            include_adult: 'false',
+            include_video: 'false',
+            language: 'en-US',
+            'release_date.gte': '2018-01-01',
+            sort_by: 'popularity.desc',
+            'vote_count.gte': 500,
+            with_original_language: 'en'
+        }
+        const urlParams = new URLSearchParams(Object.entries(searchParams))
+        const movieDiscoverUrl = baseUrl + urlParams.toString()
+    
+        // These are some movies that we want to include even if they aren't returned by our API search
+        const popularMovieIds = new Set([401981, 383498, 284053, 458156])
+
+        let page = 0
+        while (page <= MOVIE_DISCOVER_NUM_PAGES) {
+            page++
+    
+            if (page > 1) {
+                await sleep(MOVIE_DISCOVER_DELAY_BETWEEN_PAGES)
+            }
+            
+            try {
+                const response = await axios.get(movieDiscoverUrl + '&page=' + page)
+                const resultMovies = response.data.results
+    
+                for (const movie of resultMovies) {
+                    if (!unwantedMovieIds.includes(movie.id)) {
+                        popularMovieIds.add(movie.id)
+                    }
+                }
+            } catch (e) {
+                console.error('Failed to get popular movies from page', page, ':', e)
+            } 
+        }
+
+        resolve(popularMovieIds)
+    }) 
 }
-const movieDiscoverUrlParams = new URLSearchParams(Object.entries(movieDiscoverParams))
-const movieDiscoverUrl = TMDB_MOVIE_DISCOVER_BASE_URL + movieDiscoverUrlParams.toString()
 
-const TMDB_MOVIE_DETAILS_BASE_URL = 'https://api.themoviedb.org/3/movie'
-const movieDetailsParams = {
-    api_key: TMDB_API_KEY,
-    language: 'en-US',
-    include_image_language: 'en,null',
-    append_to_response: 'videos,images,credits,release_dates',
+function getMovieDetails(movieIds) {
+    return new Promise(async resolve => {
+        const baseUrl = 'https://api.themoviedb.org/3/movie'
+        const searchParams = {
+            api_key: TMDB_API_KEY,
+            language: 'en-US',
+            include_image_language: 'en,null',
+            append_to_response: 'videos,images,credits,release_dates',
+        }
+        const urlParams = new URLSearchParams(Object.entries(searchParams))
+        const movies = []
+
+        for (const movieId of movieIds) {
+            if (movies.length % MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY === 0) {
+                await sleep(MOVIE_DETAILS_DELAY)
+            }
+    
+            try {
+                const movieDetails = await axios.get(`${baseUrl}/${movieId}?${urlParams.toString()}`)
+                movies.push(parseMovie(movieDetails.data))
+            } catch (e) {
+                console.error('Failed to get movie details for movie id:', movieId, ':', e)
+            }
+        }
+    
+        resolve({
+            count: movies.length,
+            items: movies
+        })
+    })
 }
-const movieDetailsUrlParams = new URLSearchParams(Object.entries(movieDetailsParams))
-
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function execute() {
-    let page = 0
-
-    // These are some movies that we want to include even if they aren't returned by our API search
-    const popularMovies = new Set([401981, 383498, 284053, 458156])
-    while (page <= MOVIE_DISCOVER_NUM_PAGES) {
-        page++
-
-        if (page > 1) {
-            await sleep(MOVIE_DISCOVER_DELAY_BETWEEN_PAGES)
-        }
-        
-        try {
-            const response = await axios.get(movieDiscoverUrl + '&page=' + page)
-            const resultMovies = response.data.results
-
-            for (const movie of resultMovies) {
-                popularMovies.add(movie.id)
-            }
-        } catch (e) {
-            console.log('Failed to get movieList', e)
-        } 
-    }
-
-    // remove some movies that we don't want
-    popularMovies.delete(537915)
-    popularMovies.delete(332562)
-    popularMovies.delete(454983)
-    popularMovies.delete(487558)
-    popularMovies.delete(514999)
-    
-    // get movie details for each of the discovered movies
-    const movies = []
-    for (const movie of popularMovies) {
-        if (movies.length % MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY === 0) {
-            await sleep(MOVIE_DETAILS_DELAY)
-        }
-
-        try {
-            const movieDetails = await getMovieDetails(TMDB_MOVIE_DETAILS_BASE_URL, movie, movieDetailsUrlParams)
-            movies.push(parseMovie(movieDetails.data))
-        } catch (e) {
-            console.error('Failed to get movie details', e)
-        }
-    }
-
-    const result = {
-        count: movies.length,
-        items: movies
-    }
-
-    console.log(JSON.stringify(result, null, 2))
 }
 
 function parseMovie(movieData) {
@@ -143,10 +143,8 @@ function parseMovie(movieData) {
     return movieData
 }
 
-
-function getMovieDetails(baseUrl, movieId, urlParams) {
-    const url = `${baseUrl}/${movieId}?${urlParams.toString()}`
-    return axios.get(url)
-}
-
-execute()
+return Promise.resolve()
+        .then(getPopularMovies)
+        .then(getMovieDetails)
+        .then(movies => console.log(JSON.stringify(movies, null, 2)))
+        .catch(console.log)
