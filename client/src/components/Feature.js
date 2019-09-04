@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
-import MyListContext from '../MyListContext'
+import React, { useState, useEffect } from 'react'
 import ActionButtons from './ActionButtons'
 import VideoPlayer from './VideoPlayer'
 import VideoReplayButton from './VideoReplayButton'
@@ -17,7 +16,6 @@ function Feature(props) {
     const [showPoster, setShowPoster] = useState(true)
     const [showInfo, setShowInfo] = useState(true)
     const [showReplayButton, setShowReplayButton] = useState(false)
-    const myList = useContext(MyListContext)
 
     useEffect(() => {
         setTimeout(() => {
@@ -36,10 +34,6 @@ function Feature(props) {
         setShowInfo(false)
         setShowPoster(false)
         setShowReplayButton(false)
-    }
-
-    function handleMyListClick(movie) {
-        myList.update(movie)
     }
 
     return (
