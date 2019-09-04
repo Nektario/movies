@@ -13,8 +13,8 @@ function MyListButton(props) {
     const svgRef = useRef()
 
     function handleClick() {
+        util.animateSvgIcon(300, ICON_NUM_FRAMES, !myListHelper.isInMyList(props.movie), svgRef.current, ICON_SIZE)
         myListDispatch({ type: 'toggle', data: props.movie })
-        util.animateSvgIcon(250, ICON_NUM_FRAMES, !myListHelper.isInMyList(props.movie), svgRef.current, ICON_SIZE)
     }
 
     return (
