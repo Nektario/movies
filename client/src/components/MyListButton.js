@@ -1,20 +1,20 @@
-import React, { useContext, useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { ReactComponent as PlusToCheckSvg } from './myListButtonIcon.svg'
+import { useMyListDispatch, useMyListHelper } from '../my-list-context'
 import * as util from './util'
-import MyListContext from '../MyListContext'
 import Button from './Button'
 
 const ICON_SIZE = 24
 const ICON_NUM_FRAMES = 36
 
 function MyListButton(props) {
-    const myList = useContext(MyListContext)
-    const [viewBoxXStartPosition] = useState(myList.has(props.movie) ? ICON_SIZE * ICON_NUM_FRAMES : 0)
+    const [myListHelper, myListDispatch] = [useMyListHelper(), useMyListDispatch()]
+    const [viewBoxXStartPosition] = useState(myListHelper.isInMyList(props.movie) ? ICON_SIZE * ICON_NUM_FRAMES : 0)
     const svgRef = useRef()
 
     function handleClick() {
-        myList.update(props.movie)
-        util.animateSvgIcon(250, ICON_NUM_FRAMES, !myList.has(props.movie), svgRef.current, ICON_SIZE)
+        myListDispatch({ type: 'toggle', data: props.movie })
+        util.animateSvgIcon(250, ICON_NUM_FRAMES, !myListHelper.isInMyList(props.movie), svgRef.current, ICON_SIZE)
     }
 
     return (

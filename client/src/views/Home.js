@@ -1,5 +1,5 @@
-import React, { useReducer, useContext, useState } from 'react'
-import MyListContext from '../MyListContext'
+import React, { useReducer, useState } from 'react'
+import { useMyListHelper } from '../my-list-context'
 import usePersistentState from '../hooks/usePersistentState'
 import { useTransition, animated, config } from 'react-spring'
 import Header from '../components/Header'
@@ -58,12 +58,12 @@ function Home(props) {
         movieFilters: MovieFilters()
     })
     const [currentlyOpenedMovieDetailsRow, setCurrentlyOpenedMovieDetailsRow] = useState()
-    const myList = useContext(MyListContext)
+    const myListHelper = useMyListHelper()
     const rows = [
         {
             title: 'My List',
             movies: props.allMovies
-                .filter(movie => myList.has(movie))
+                .filter(movie => myListHelper.isInMyList(movie))
                 .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
         },
         {
