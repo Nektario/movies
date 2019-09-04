@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import * as config from './config'
 import './Movie.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faMale, faFemale, faBaby, faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faInfo } from '@fortawesome/free-solid-svg-icons'
 
-// It's too slow to render the Actions and Info components for all items when they mount.
-// So instead, they only render for an item once it has been hovered
 const POSTER_URL = config.POSTER_URL
 
 const Movie = React.forwardRef(({ item: movie, shouldShowOverlay, className, onMouseEnter, onMouseLeave, isVisible, onMovieDetailsClick, styles }, ref) => {
@@ -26,6 +24,8 @@ const Movie = React.forwardRef(({ item: movie, shouldShowOverlay, className, onM
                 <>
                     <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.title + ' poster'} />
 
+                    {/* It's too slow to render the Actions and Info components for all items when they mount.
+                        So instead, they only render for an item once it has been hovered */}
                     <div className='overlay'>
                         <Actions movie={movie} shouldShow={wasHovered && shouldShowOverlay} onMovieDetailsClick={onMovieDetailsClick} />
                         <Info movie={movie} shouldShow={wasHovered && shouldShowOverlay} />
@@ -77,10 +77,6 @@ function Actions({ shouldShow, onMovieDetailsClick }) {
     if (shouldShow) {
         return (
             <div className='actions'>
-                {/* <FontAwesomeIcon icon={faPlay} className='icon' fixedWidth /> */}
-                {/* <FontAwesomeIcon icon={faMale} className='icon' fixedWidth />
-                <FontAwesomeIcon icon={faFemale} className='icon' fixedWidth />
-                <FontAwesomeIcon icon={faBaby} className='icon' fixedWidth /> */}
                 <FontAwesomeIcon icon={faInfo} className='icon icon-hoverable' fixedWidth onClick={onMovieDetailsClick} />
             </div>
         )
