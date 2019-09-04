@@ -6,6 +6,7 @@ import './Header.scss'
 
 const ICON_SIZE = 24
 const ICON_NUM_FRAMES = 60
+const SEARCH_TO_CLOSE_ICON_ANIMATION_DURATION_MILLIS = 550
 
 function Header() {
     const [isSearchInputExpanded, setIsSearchInputExpanded] = React.useState(false)
@@ -14,7 +15,7 @@ function Header() {
     const searchInputRef = React.useRef()
 
     function toggleSearchInputDisplay() {
-        animateSvgIcon(550, ICON_NUM_FRAMES, !isSearchInputExpanded, svgRef.current, ICON_SIZE)
+        animateSvgIcon(SEARCH_TO_CLOSE_ICON_ANIMATION_DURATION_MILLIS, ICON_NUM_FRAMES, !isSearchInputExpanded, svgRef.current, ICON_SIZE)
         setIsSearchInputExpanded(curr => !curr)
 
         if (!isSearchInputExpanded) {
