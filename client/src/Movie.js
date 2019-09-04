@@ -3,7 +3,7 @@ import * as config from './config'
 import './Movie.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfo } from '@fortawesome/free-solid-svg-icons'
-import { convertMinsToHours } from 'util'
+import { convertMinsToHours } from './util'
 
 const POSTER_URL = config.POSTER_URL
 
