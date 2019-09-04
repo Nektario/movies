@@ -8,9 +8,9 @@ const MOVIE_DISCOVER_NUM_PAGES = 20
 const MOVIE_DISCOVER_DELAY_BETWEEN_PAGES = 5000
 const MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY = 20
 const MOVIE_DETAILS_DELAY = 5000
-
 const TMDB_API_KEY = process.env.TMDB_API_KEY
-const TMDB_DISCOVER_MOVIE_BASE_URL = 'https://api.themoviedb.org/3/discover/movie?'
+
+const TMDB_MOVIE_DISCOVER_BASE_URL = 'https://api.themoviedb.org/3/discover/movie?'
 const movieDiscoverParams = {
     api_key: TMDB_API_KEY,
     include_adult: 'false',
@@ -22,7 +22,17 @@ const movieDiscoverParams = {
     with_original_language: 'en'
 }
 const movieDiscoverUrlParams = new URLSearchParams(Object.entries(movieDiscoverParams))
-const movieDiscoverUrl = TMDB_DISCOVER_MOVIE_BASE_URL + movieDiscoverUrlParams.toString()
+const movieDiscoverUrl = TMDB_MOVIE_DISCOVER_BASE_URL + movieDiscoverUrlParams.toString()
+
+const TMDB_MOVIE_DETAILS_BASE_URL = 'https://api.themoviedb.org/3/movie'
+const movieDetailsParams = {
+    api_key: TMDB_API_KEY,
+    language: 'en-US',
+    include_image_language: 'en,null',
+    append_to_response: 'videos,images,credits,release_dates',
+}
+const movieDetailsUrlParams = new URLSearchParams(Object.entries(movieDetailsParams))
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -67,7 +77,7 @@ async function execute() {
         }
 
         try {
-            const movieDetails = await getMovieDetails(movie)
+            const movieDetails = await getMovieDetails(TMDB_MOVIE_DETAILS_BASE_URL, movie, movieDetailsUrlParams)
             movies.push(parseMovie(movieDetails.data))
         } catch (e) {
             console.error('Failed to get movie details', e)
@@ -134,12 +144,9 @@ function parseMovie(movieData) {
 }
 
 
-function getMovieDetails(movieId) {
-    const urlStart = 'https://api.themoviedb.org/3/movie/'
-    const urlEnd = '?language=en-US&include_image_language=en,null&append_to_response=videos,images,credits,release_dates&api_key=' + API_KEY
-
-    const theUrl = `${urlStart}${movieId}${urlEnd}`
-    return axios.get(theUrl)
+function getMovieDetails(baseUrl, movieId, urlParams) {
+    const url = `${baseUrl}/${movieId}?${urlParams.toString()}`
+    return axios.get(url)
 }
 
 execute()
