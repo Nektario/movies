@@ -31,7 +31,7 @@ function Header(props) {
             // This is here so that the placeholder text doesn't mix in with the search icon during..
             // ..expansion of the search bar    
             setTimeout(() => {
-                searchInputRef.current.placeholder = 'Search'
+                searchInputRef.current.placeholder = 'Search movie title'
             }, 150)
         } else {
             searchInputRef.current.placeholder = ''
@@ -40,7 +40,9 @@ function Header(props) {
 
     function handleSubmitSearch(e) {
         e.preventDefault()
-        props.history.push('/search?' + searchInputValue)
+        if (searchInputValue.length > 1) {
+            props.history.push('/search?' + searchInputValue)
+        }
     }
 
     return (
