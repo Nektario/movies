@@ -1,5 +1,5 @@
 import React, { useRef, useState, useLayoutEffect, useEffect } from 'react'
-import Movie from '../Movie'
+import Movie from './Movie'
 import Slider from '../components/Slider/Slider'
 import Backdrop from '../components/Backdrop'
 import ActionButtons from '../components/ActionButtons'
