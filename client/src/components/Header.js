@@ -35,13 +35,29 @@ function Header(props) {
             }, 150)
         } else {
             searchInputRef.current.placeholder = ''
+
+            // If the user is on a search results page and they close the search bar..
+            // ..take them back to the referrer
+            if (props.location.pathname === '/search') {
+                const referrer = props.location.state.referrer
+                setTimeout(() => {
+                    if (referrer) {
+                        console.log('going to referrer', referrer)
+                        props.history.push(referrer)
+                    } else {
+                        console.log('going to /home')
+                        props.history.push('/home')
+                    }
+                }, 450)
+            }
         }
+
     }
 
     function handleSubmitSearch(e) {
         e.preventDefault()
         if (searchInputValue.length > 1) {
-            props.history.push('/search?' + searchInputValue)
+            props.history.push('/search?' + searchInputValue, { referrer: props.location.pathname })
         }
     }
 
@@ -58,10 +74,9 @@ function Header(props) {
                         </svg>
                     </div>
                     <div className='header-text-item'><Link to='/home'>Home</Link></div>
-                    <div className='header-text-item'>Top Rated</div>
-                    <div className='header-text-item'>Recently Added</div>
-                    <div className='header-text-item'>My List</div>
+                    <div className='header-text-item'><Link to='/my-list'>My List</Link></div>
                 </div>
+
                 <div className='right'>
                     <form className='search' onSubmit={handleSubmitSearch}>
                         <input
