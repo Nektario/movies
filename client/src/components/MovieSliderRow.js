@@ -24,7 +24,7 @@ function convertVwToPixels(sizeInVw) {
     return (sizeInVw * width) / 100;
   }
 
-function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick, showRowHeader }) {
+function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick, onMeasure, showRowHeader = true }) {
     const [currentlyDisplayedMovieDetailsMovie, setCurrentlyDisplayedMovieDetailsMovie] = useState()
     const detailsPaneRef = useRef()
     const detailsPaneRectRefVar = useRef()
@@ -80,7 +80,7 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick, sho
         }, debounceTimerRefVar.current, 300)
     }, [isDetailsPaneOpen])
 
-    if (movies.length === 0) {
+    if (!movies || movies.length === 0) {
         return null
     }
     
@@ -98,6 +98,7 @@ function MovieSliderRow({ rowTitle, shouldOpen, movies, onMovieDetailsClick, sho
                 isDetailsPaneOpen={isDetailsPaneOpen}
                 onItemHovered={handleItemHovered}
                 onItemHoveredOut={handleItemHoveredOut}
+                onMeasure={onMeasure}
                 render={props => 
                     <Movie
                         key={props.item.uid}
