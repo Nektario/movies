@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, createRef, useLayoutEffect } from 'react'
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import useMeasureSlider from './useMeasureSlider'
 import { useSpring, animated } from 'react-spring'
 import './Slider.scss'
@@ -8,20 +8,19 @@ function Slider(props) {
     const [transforms, setTransforms] = useState({})
     const [scrollDistance, setScrollDistance] = useState(0)
     const [currentScrollPage, setCurrentScrollpage] = useState(1)
-    const [wasNewItemAdded, setWasNewItemAdded] = useState() // need to trigger a re-render if new items are added to the slider in order to update the refs
+    const [didItemsChange, setDidItemsChange] = useState() // need to trigger a re-render if props.items changes in order to update the item refs
     const { sliderPadding, sliderWidth, numItemsPerPage, refCallback } = useMeasureSlider(true)
     const slideAnimationProps = useSpring({ transform: `translateX(${scrollDistance}px)`})
     const sliderId = 'slider-' + props.id
 
     // IntersectionObserver
+    const sliderItemRefs = useRef(createItemRefPlaceholders(props.items))
     const intersectionObserverOptions = {
         root: document.getElementById(sliderId),
         rootMargin: '100%',
         threshold: '0'
     }
-    const sliderItemRefs = useRef(props.items.map(() => createRef()))
     const intersectionObserver = useRef()
-
     if (!intersectionObserver.current) {
         intersectionObserver.current = new IntersectionObserver((entries, observer) => {
             const newIntersectingState = new Map()
@@ -38,33 +37,42 @@ function Slider(props) {
         }, intersectionObserverOptions)
     }
     
+    function createItemRefPlaceholders(items) {
+        return items.map(() => React.createRef())
+    }
+
+    useLayoutEffect(function observeItems() {
+        props.items.forEach((_, i) => intersectionObserver.current.observe(sliderItemRefs.current[i].current))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [didItemsChange])
+
     useLayoutEffect(function setupItemRefs() {
         if (props.items) {
-            props.items.forEach((item, i) => {
-                if (sliderItemRefs.current[i]) {
-                    intersectionObserver.current.observe(sliderItemRefs.current[i].current)
-                } else {
-                    sliderItemRefs.current[i] = createRef()
-                    setWasNewItemAdded(Math.random()+'')
-                }
-            })
+            sliderItemRefs.current = createItemRefPlaceholders(props.items)
+            setDidItemsChange(Math.random()+'')
         }
     }, [props.items])
 
     useEffect(function onSliderMeasurementsChanged() {
+        if (props.onMeasure && typeof props.onMeasure === 'function') {
+            props.onMeasure({ sliderPadding, sliderWidth, numItemsPerPage })
+        }
+        
         if (currentScrollPage > 1) {
             const newScrollDistance = (currentScrollPage - 1) * (-sliderWidth + sliderPadding)
             setScrollDistance(newScrollDistance)
         }
-    }, [sliderWidth, sliderPadding, scrollDistance, currentScrollPage])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sliderWidth, sliderPadding, scrollDistance, currentScrollPage, numItemsPerPage])
 
     useEffect(function removeStylesWhenDetailsOpened() {
         if (props.isDetailsPaneOpen) {
             handleHoverOut()
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.isDetailsPaneOpen])
 
-    useEffect(function disableIntersectionObserver() {
+    useEffect(function disableIntersectionObserverOnUnMount() {
         return () => intersectionObserver.current.disconnect()
     }, [])
     
@@ -140,7 +148,7 @@ function Slider(props) {
     }
 
     function handleHoverOut() {
-        props.onItemHoveredOut()
+        props.onItemHoveredOut && props.onItemHoveredOut()
         setTransforms({})
     }
 
