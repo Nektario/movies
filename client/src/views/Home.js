@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
-import { useMyListHelper } from '../my-list-context'
-import Header from '../components/Header'
+import React from 'react'
 import moment from 'moment'
-import MovieSliderRow from '../components/MovieSliderRow'
+import { useMyListHelper } from '../my-list-context'
+import HorizontallyScrollableRowView from './HorizontallyScrollableRowView'
 import Feature from '../components/Feature'
 import './Home.scss'
 
 function Home(props) {
-    const [currentlyOpenedMovieDetailsRow, setCurrentlyOpenedMovieDetailsRow] = useState()
     const myListHelper = useMyListHelper()
     const rows = [
         {
@@ -35,14 +33,6 @@ function Home(props) {
     ]
 
 
-    function toggleMovieDetailsVisibility(titleOfClickedRow) {
-        if (titleOfClickedRow === currentlyOpenedMovieDetailsRow) {
-            setCurrentlyOpenedMovieDetailsRow('')
-        } else {
-            setCurrentlyOpenedMovieDetailsRow(titleOfClickedRow)
-        }
-    }
-
     if (!props.allMovies || props.allMovies.length === 0) {
         return null
     }
@@ -57,15 +47,7 @@ function Home(props) {
             </div>
 
             <main>
-                { rows.map(row => 
-                    <MovieSliderRow
-                        key={row.title}
-                        rowTitle={row.title}
-                        onMovieDetailsClick={(title) => toggleMovieDetailsVisibility(title)}
-                        shouldOpen={currentlyOpenedMovieDetailsRow === row.title}
-                        movies={row.movies}
-                    />)
-                }
+                <HorizontallyScrollableRowView rows={rows} />
             </main>
         </div>
     )
