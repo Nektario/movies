@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "nekflicks"
+  },
+  "targets": {
+    "nekflicks": {
+      "hosting": {
+        "alt": [
+          "movies-one"
+        ],
+        "default": [
+          "nekflicks"
+        ]
+      }
+    }
   }
 }
