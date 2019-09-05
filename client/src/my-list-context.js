@@ -81,7 +81,7 @@ function useMyListHelper() {
     const context = React.useContext(MyListHelperContext)
 
     if (context === undefined) {
-        throw new Error('useMyListDispatch must be used within a MyListHelperContext provider')
+        throw new Error('useMyListHelper must be used within a MyListHelperContext provider')
     }
 
     return context

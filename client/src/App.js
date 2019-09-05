@@ -1,14 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import { MyListProvider } from './my-list-context'
+import { useMyListHelper } from './my-list-context'
 import featuredMovies from './data/feature-movies'
 import Header from './components/Header'
 import Home from './views/Home'
 import Search from './views/Search'
-import axios from 'axios'
+import ItemList from './views/ItemList'
 
 function App() {
     const [allMovies, setAllMovies] = useState([])
+    const myListHelper = useMyListHelper()
     const randomFeatureMovie = featuredMovies[Math.floor(Math.random() * featuredMovies.length)]
     const featureMovie = useRef()
     if (!featureMovie.current) {
@@ -32,16 +34,15 @@ function App() {
     }
 
     return (
-        <MyListProvider>
-            <Router>
-                <Header />
-                <Switch>
-                    <Route path='/home' render={props => <Home {...props} allMovies={allMovies} feature={featureMovie.current} />} />
-                    <Route path='/search' component={props => <Search {...props} allMovies={allMovies} />} />
-                    <Route render={() => <Redirect to='/home' />} />
-                </Switch>
-            </Router>
-        </MyListProvider>
+        <Router>
+            <Header />
+            <Switch>
+                <Route path='/home' render={props => <Home {...props} allMovies={allMovies} feature={featureMovie.current} />} />
+                <Route path='/my-list' render={props => <ItemList {...props} movies={allMovies.filter(movie => myListHelper.isInMyList(movie))} />} />
+                <Route path='/search' render={props => <Search {...props} allMovies={allMovies} />} />
+                <Route render={() => <Redirect to='/home' />} />
+            </Switch>
+        </Router>
     )
 }
 
