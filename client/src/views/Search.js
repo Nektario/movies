@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import RowView from './RowView'
 import './Search.scss'
 
@@ -7,19 +8,38 @@ function Search(props) {
     const searchText = props.location.search.replace('?','')
 
     React.useEffect(function performSearch() {
-        const results = props.allMovies
-                            .filter(movie => movie.title.toLowerCase().includes(searchText))
-                            .sort((a,b) => a.title.localeCompare(b.title))
-
-        setSearchResults({ title: 'Search Results', movies: results })
+        if (isSearchTextValid(searchText)) {
+            const results = props.allMovies
+                                .filter(movie => movie.title.toLowerCase().includes(searchText))
+                                .sort((a,b) => a.title.localeCompare(b.title))
+    
+            setSearchResults({ title: 'Search Results', movies: results })
+        }
     }, [props.allMovies, searchText])
 
-    return (
-        <div>
-            <h2>Search results for: { props.location.search.replace('?','') }</h2>
-            { searchResults && searchResults.movies.length && <RowView row={searchResults} showRowHeader={false} /> }
-        </div>
-    )
+    function isSearchTextValid(searchText) {
+        return searchText && searchText.length > 1
+    }
+
+    if (!isSearchTextValid(searchText)) {
+        props.history.push('/home')
+        return null
+    }
+
+    if (!searchResults) {
+        return null
+    }
+
+    if (searchResults) {
+        return (
+            <>
+                <div className='search-header'>
+                    <p>{ searchResults.movies.length } results</p>
+                </div>
+                <RowView row={searchResults} showRowHeader={false} />
+            </>
+        )
+    }
 }
 
-export default Search
+export default withRouter(Search)
