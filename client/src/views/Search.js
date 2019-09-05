@@ -7,7 +7,10 @@ function Search(props) {
     const searchText = props.location.search.replace('?','')
 
     React.useEffect(function performSearch() {
-        const results = props.allMovies.filter(movie => movie.title.toLowerCase().includes(searchText))
+        const results = props.allMovies
+                            .filter(movie => movie.title.toLowerCase().includes(searchText))
+                            .sort((a,b) => a.title.localeCompare(b.title))
+
         setSearchResults({ title: 'Search Results', movies: results })
     }, [props.allMovies, searchText])
 
