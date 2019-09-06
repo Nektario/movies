@@ -48,14 +48,13 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                height: 100%;
             }
 
             .search-to-close-icon {
-                right: 4px;
                 z-index: 3;
                 transition: all 150ms ease-in 250ms;
 
+                margin-right: 4px;
                 width: 1.5vw;
                 min-width: 24px;
                 stroke: white;
@@ -77,7 +76,7 @@
                 z-index: 3;
 
                 width: 30px;
-                height: 1.7vw;
+                height: 1.8vw;
                 min-height: 32px;
                 opacity: 0;
                 border-radius: 4px;
@@ -93,7 +92,7 @@
 
             .search-input-expanded {
                 opacity: 1;
-                width: 300px;
+                width: 320px;
                 transition: opacity 0ms ease-in 0ms, width 150ms ease-in 50ms;
             }
         }
