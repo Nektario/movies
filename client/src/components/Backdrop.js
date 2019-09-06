@@ -1,12 +1,29 @@
 import React from 'react'
 import * as config from '../config'
+import './Backdrop.scss'
 
-function Backdrop({ src, className, alt, ...rest}) {
-    const url = config.BACKDROP_URL + src
+function Backdrop(props) {
+    const [isLoaded, setIsLoaded] = React.useState(false)
+    const url = config.BACKDROP_URL + props.src
     
+    let imgClass = ''
+    if (props.shouldFadeIn) {
+        if (isLoaded) {
+            imgClass = 'show'
+        } else {
+            imgClass = 'hide'
+        }
+    }
+
     return (
-        <div className={'backdrop ' + className}>
-            <img src={url} alt={alt ? alt : 'backdrop'} {...rest} />
+        <div className={'backdrop ' + props.className} role='img' aria-label='Backdrop poster of movie'>
+            <img 
+                src={url}
+                className={imgClass}
+                style={props.style}
+                alt={props.alt ? props.alt : 'Backdrop poster of movie'}
+                onLoad={() => setIsLoaded(true)}
+            />
         </div>
     )
 }
