@@ -78,6 +78,7 @@ function Feature(props) {
                     src={props.movie.backdrop_path}
                     className={`feature-poster ${showPoster ? '' : 'feature-hidden'}`}
                     shouldFadeIn={true}
+                    size='large'
                 />
 
                 <VideoPlayer
