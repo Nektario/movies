@@ -146,5 +146,6 @@ function parseMovie(movieData) {
 return Promise.resolve()
         .then(getPopularMovies)
         .then(getMovieDetails)
-        .then(movies => console.log(JSON.stringify(movies, null, 2)))
+        //.then(movies => console.log(JSON.stringify(movies, null, 2)))
+        .then(movies => console.log(JSON.stringify(movies)))
         .catch(console.log)
