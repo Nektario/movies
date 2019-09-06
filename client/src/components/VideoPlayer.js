@@ -14,7 +14,9 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
     function togglePlayState(e) {
         e.stopPropagation()
 
-        videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
+        if (shouldPlay) {
+            videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
+        }
     }
 
     function handleVideoVolumeClick(e) {
@@ -51,7 +53,7 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
         setIsVideoEnded(false)
     }
 
-    useEffect(() => {
+    React.useLayoutEffect(() => {
         if (shouldPlay) {
             videoRef.current.play()
         }
@@ -70,6 +72,7 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
                 ref={videoRef}
                 onEnded={handleVideoEnded}
                 onPlay={handleVideoPlayed}
+                preload='metadata'
             >
                 <source src={path} type={mimeType} />
             </video>
@@ -82,16 +85,18 @@ function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVi
             }
             
             {/* This is absolutely positioned */}
-            <div className='video-controls'>
-                <CrossfadeChildren speed='fast' toggle={isVideoEnded}>
-                <div id={randomKey()}>
-                    <VideoReplayButton onClick={handleVideoReplayClick} />
-                    </div>
-                    <div id={randomKey()}>
-                    <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
-                    </div>
-                </CrossfadeChildren>
-            </div>
+            { shouldPlay && 
+                <div className='video-controls'>
+                    <CrossfadeChildren speed='fast' toggle={isVideoEnded}>
+                        <div id={randomKey()}>
+                            <VideoReplayButton onClick={handleVideoReplayClick} />
+                        </div>
+                        <div id={randomKey()}>
+                            <VideoVolumeButton isMuted={isMuted} onClick={handleVideoVolumeClick} />
+                        </div>
+                    </CrossfadeChildren>
+                </div>
+            }
         </div>
     )
 }
