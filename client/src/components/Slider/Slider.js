@@ -9,7 +9,7 @@ function Slider(props) {
     const [scrollDistance, setScrollDistance] = useState(0)
     const [currentScrollPage, setCurrentScrollpage] = useState(1)
     const [didItemsChange, setDidItemsChange] = useState() // need to trigger a re-render if props.items changes in order to update the item refs
-    const { sliderPadding, sliderWidth, numItemsPerPage, refCallback } = useMeasureSlider(true)
+    const { sliderPadding, sliderWidth, sliderHeight, numItemsPerPage, refCallback } = useMeasureSlider(true)
     const slideAnimationProps = useSpring({ transform: `translateX(${scrollDistance}px)`})
     const sliderId = 'slider-' + props.id
 
@@ -55,7 +55,7 @@ function Slider(props) {
 
     useEffect(function onSliderMeasurementsChanged() {
         if (props.onMeasure && typeof props.onMeasure === 'function') {
-            props.onMeasure({ sliderPadding, sliderWidth, numItemsPerPage })
+            props.onMeasure({ sliderPadding, sliderWidth, sliderHeight, numItemsPerPage })
         }
         
         if (currentScrollPage > 1) {

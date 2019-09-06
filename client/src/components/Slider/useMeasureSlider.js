@@ -37,16 +37,18 @@ const measure = function(slider, currState, dispatch) {
 
     if (slider) {
         const sliderWidth = slider.clientWidth
+        const sliderHeight = slider.clientHeight
         const sliderPadding = getAttributeSize(slider, 'padding-right') * 2
         const itemWidth = getAttributeSize(slider.children[0], 'width')
         const numItemsPerPage = Math.floor(sliderWidth / itemWidth)
-        //console.log('Measurement:', sliderWidth, sliderPadding, itemWidth, numItemsPerPage)
+        //console.log('Measurement:', sliderWidth, sliderHeight, sliderPadding, itemWidth, numItemsPerPage)
       
         if (sliderWidth !== currState.sliderWidth || sliderPadding !== currState.sliderPadding || numItemsPerPage !== currState.numItemsPerPage) {
             dispatch({
                 type: 'measured',
                 payload: {
                     sliderWidth,
+                    sliderHeight,
                     sliderPadding,
                     numItemsPerPage
                 }
