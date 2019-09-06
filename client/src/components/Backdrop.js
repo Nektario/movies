@@ -4,7 +4,13 @@ import './Backdrop.scss'
 
 function Backdrop(props) {
     const [isLoaded, setIsLoaded] = React.useState(false)
-    const url = config.BACKDROP_URL + props.src
+    
+    let url
+    if (props.size === 'large') {
+        url = config.BACKDROP_URL_LARGE + props.src
+    } else {
+        url = config.BACKDROP_URL + props.src
+    }
     
     let imgClass = ''
     if (props.shouldFadeIn) {
