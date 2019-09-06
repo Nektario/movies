@@ -7,7 +7,7 @@ import VideoVolumeButton from './VideoVolumeButton'
 import './VideoPlayer.scss'
 
 function VideoPlayer({ className, path, mimeType, shouldPlay, loop = false, onVideoPlayed, onVideoEnded, showRatedBar = true, movieRated }) {
-    const [isMuted, setIsMuted] = usePersistentState('video_player_is_muted', true)
+    const [isMuted, setIsMuted] = usePersistentState('movies_video_player_is_muted', true)
     const [isVideoEnded, setIsVideoEnded] = useState(false)
     const videoRef = useRef()
     

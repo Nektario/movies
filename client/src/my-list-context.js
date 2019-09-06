@@ -3,7 +3,7 @@
 import React from 'react'
 import usePersistentReducer from './hooks/usePersistentReducer'
 
-const MY_LIST_STORAGE_KEY = 'my-list'
+const MY_LIST_STORAGE_KEY = 'movies_my_list'
 const MyListStateContext = React.createContext()
 const MyListDispatchContext = React.createContext()
 const MyListHelperContext = React.createContext()
