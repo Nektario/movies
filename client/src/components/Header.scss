@@ -1,17 +1,21 @@
 @import '../variables';
 
 .header {
-    height: $header-height;
     position: relative;
     padding: 0 24px;
     z-index: 1;
     
+    // Layout
     .header-content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 3vw;
+        min-height: 50px;
+
         color: white;
         font-weight: 600;
-        
+
         a {
             text-decoration: none;
             color: inherit;
@@ -21,55 +25,60 @@
             display: flex;
             align-items: center;
 
-            div {
+            div,
+            a {
                 margin-right: 16px;
                 z-index: 3;
             }
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-size: 28px;
-            padding: 4px 0;
-            z-index: 3;
 
-            svg {
-                padding: 0;
+            .logo {
+                display: flex;
+                align-items: center;
+                z-index: 3;
+
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                font-size: 28px;
+                padding: 4px 0;
             }
         }
 
         .right {
             .search {
                 position: relative;
-                align-items: center;
                 display: flex;
-                width: 300px;
+                align-items: center;
                 height: 100%;
             }
 
             .search-to-close-icon {
-                position: absolute;
                 right: 4px;
-                stroke: white;
-                width: 24px;
-                will-change: stroke;
+                z-index: 3;
                 transition: all 150ms ease-in 250ms;
+
+                width: 1.5vw;
+                min-width: 24px;
+                stroke: white;
+                stroke-width: 2.5;
+                fill: none;
+                will-change: stroke stroke-width;
                 cursor: pointer;
             }
 
             .search-to-close-icon-expanded {
                 stroke: $color-accent;
+                stroke-width: 1.8;
                 transition: all 0ms ease-in 0ms;
             }
 
             .search-input {
                 position: absolute;
                 right: 0;
+                z-index: 3;
+
                 width: 30px;
-                height: 32px;
+                height: 1.7vw;
+                min-height: 32px;
                 opacity: 0;
                 border-radius: 4px;
                 border: 0;
@@ -82,7 +91,6 @@
                 transition: opacity 250ms ease-in 50ms, width 150ms ease-in 50ms;
             }
 
-            // in
             .search-input-expanded {
                 opacity: 1;
                 width: 300px;
@@ -92,15 +100,13 @@
     }
 
     .top-scrim {
-        display: flex;
         position: absolute;
+        top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        top: 0;
-        color: white;
-        align-items: center;
-        height: $header-height;
+        height: 3.4vw;
+        min-height: 50px;
         background: linear-gradient(
             hsla(0, 0%, 0%, .7) 0%,
             hsla(0, 0%, 0%, 0.738) 10%,
@@ -116,6 +122,7 @@
             hsla(0, 0%, 0%, 0.002) 98.2%,
             hsla(0, 0%, 0%, 0) 100%
         );
+        //background-color: red;
     }
 }
 
