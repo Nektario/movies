@@ -1,227 +1,227 @@
 <svg xmlns="http://www.w3.org/2000/svg" className="search-to-close-icon">
-	<path d="M13.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M18 6L6 18" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M6 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M37.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M42 6L30 18" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M30 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M61.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M66 6L54 18" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M54 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M85.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M90 6L78 18" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M78 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M109.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M114 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M102 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M133.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M138 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M126 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M157.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M162 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M150 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M181.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M186 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M174 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M205.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8"/>
-	<path d="M210 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M198 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M229.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="34.43599796647014,0.12599793175826465" strokeDashoffset="34.435998"/>
-	<path d="M234 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M222 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M253.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="34.03880776985719,0.5231881283712124" strokeDashoffset="34.038808"/>
-	<path d="M258 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M246 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M277.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="33.37649028901974,1.18550560920866" strokeDashoffset="33.37649"/>
-	<path d="M282 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M270 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M301.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="32.45952412688188,2.1024717713465253" strokeDashoffset="32.459524"/>
-	<path d="M306 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M294 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M325.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="31.30241671316706,3.2595791850613445" strokeDashoffset="31.302417"/>
-	<path d="M330 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M318 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M349.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="29.923474780642604,4.638521117585801" strokeDashoffset="29.923475"/>
-	<path d="M354 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M342 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M373.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="28.344514732143036,6.217481166085368" strokeDashoffset="28.344515"/>
-	<path d="M378 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M366 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M397.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="26.59051748068955,7.971478417538856" strokeDashoffset="26.590517"/>
-	<path d="M402 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M390 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M421.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="24.689233223520894,9.87276267470751" strokeDashoffset="24.689233"/>
-	<path d="M426 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M414 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M445.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="22.670742402952268,11.891253495276134" strokeDashoffset="22.670742"/>
-	<path d="M450 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M438 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
-	<path d="M469.372414 13.372414c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="20.56697980015222,13.995016098076182" strokeDashoffset="20.56698"/>
-	<path d="M474 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M462 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.312138736988897,9.486851136234433" strokeDashoffset="10.319"/>
-	<path d="M493.317707 13.317707c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="18.411229291205963,16.15076660702244" strokeDashoffset="18.411229"/>
-	<path d="M498 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M486 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.36710464128024,9.43188523194309" strokeDashoffset="10.396599"/>
+	<path d="M13.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M18 6L6 18" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M6 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M37.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M42 6L30 18" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M30 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M61.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M66 6L54 18" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M54 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M85.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M90 6L78 18" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M78 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M109.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M114 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M102 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M133.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M138 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M126 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M157.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M162 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M150 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M181.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M186 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M174 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M205.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z"/>
+	<path d="M210 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M198 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M229.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="34.43599796647014,0.12599793175826465" strokeDashoffset="34.435998"/>
+	<path d="M234 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M222 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M253.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="34.03880776985719,0.5231881283712124" strokeDashoffset="34.038808"/>
+	<path d="M258 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M246 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M277.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="33.37649028901974,1.18550560920866" strokeDashoffset="33.37649"/>
+	<path d="M282 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M270 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M301.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="32.45952412688188,2.1024717713465253" strokeDashoffset="32.459524"/>
+	<path d="M306 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M294 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M325.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="31.30241671316706,3.2595791850613445" strokeDashoffset="31.302417"/>
+	<path d="M330 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M318 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M349.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="29.923474780642604,4.638521117585801" strokeDashoffset="29.923475"/>
+	<path d="M354 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M342 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M373.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="28.344514732143036,6.217481166085368" strokeDashoffset="28.344515"/>
+	<path d="M378 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M366 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M397.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="26.59051748068955,7.971478417538856" strokeDashoffset="26.590517"/>
+	<path d="M402 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M390 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M421.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="24.689233223520894,9.87276267470751" strokeDashoffset="24.689233"/>
+	<path d="M426 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M414 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M445.389 13.389c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="22.670742402952268,12.291253495276134" strokeDashoffset="22.670742"/>
+	<path d="M450 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M438 6l14 14" strokeDasharray="10.295474734076132,9.503515139147199" strokeDashoffset="10.295475"/>
+	<path d="M469.372414 13.372414c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="20.56697980015222,13.995016098076182" strokeDashoffset="20.56698"/>
+	<path d="M474 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M462 6l14 14" strokeDasharray="10.312138736988897,9.486851136234433" strokeDashoffset="10.319"/>
+	<path d="M493.317707 13.317707c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="18.411229291205963,16.15076660702244" strokeDashoffset="18.411229"/>
+	<path d="M498 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M486 6l14 14" strokeDasharray="10.36710464128024,9.43188523194309" strokeDashoffset="10.396599"/>
 	<g>
-		<path d="M517.215718 13.215718c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="16.237597258989087,18.324398639239316" strokeDashoffset="16.237597"/>
-		<path d="M522 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-		<path d="M510 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.469575667851009,9.329414205372322" strokeDashoffset="10.541264"/>
+		<path d="M517.215718 13.215718c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="16.237597258989087,18.324398639239316" strokeDashoffset="16.237597"/>
+		<path d="M522 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+		<path d="M510 6l14 14" strokeDasharray="10.469575667851009,9.329414205372322" strokeDashoffset="10.541264"/>
 	</g>
 <g>
-<path d="M541.054464 13.054464c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="14.080472992064333,20.48152290616407" strokeDashoffset="14.080473"/>
-	<path d="M546 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M534 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.631591778121608,9.167398095101722" strokeDashoffset="10.769993"/></g>
+<path d="M541.054464 13.054464c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="14.080472992064333,20.48152290616407" strokeDashoffset="14.080473"/>
+	<path d="M546 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M534 6l14 14" strokeDasharray="10.631591778121608,9.167398095101722" strokeDashoffset="10.769993"/></g>
 <g>
-<path d="M564.818793 12.818793c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="11.973984607694169,22.588011290534233" strokeDashoffset="11.973985"/>
-	<path d="M570 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M558 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="10.86837560735393,8.930614265869401" strokeDashoffset="11.104276"/></g>
+<path d="M564.818793 12.818793c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="11.973984607694169,22.588011290534233" strokeDashoffset="11.973985"/>
+	<path d="M570 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M558 6l14 14" strokeDasharray="10.86837560735393,8.930614265869401" strokeDashoffset="11.104276"/></g>
 <g>
-<path d="M588.491557 12.491557c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="9.951459106875307,24.610536791353095" strokeDashoffset="9.951459"/>
-	<path d="M594 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M582 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="11.197158420792293,8.601831452431037" strokeDashoffset="11.56844"/></g>
+<path d="M588.491557 12.491557c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="9.951459106875307,24.610536791353095" strokeDashoffset="9.951459"/>
+	<path d="M594 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M582 6l14 14" strokeDasharray="11.197158420792293,8.601831452431037" strokeDashoffset="11.56844"/></g>
 <g>
-<path d="M612.059304 12.059304c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="8.044895103928045,26.517100794300358" strokeDashoffset="8.044895"/>
-	<path d="M618 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M606 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="11.631453158127348,8.167536715095983" strokeDashoffset="12.181562"/></g>
+<path d="M612.059304 12.059304c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="8.044895103928045,26.517100794300358" strokeDashoffset="8.044895"/>
+	<path d="M618 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M606 6l14 14" strokeDasharray="11.631453158127348,8.167536715095983" strokeDashoffset="12.181562"/></g>
 <g>
-<path d="M635.526041 11.526041c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="6.284456572647808,28.277539325580594" strokeDashoffset="6.284457"/>
-	<path d="M642 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M630 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="12.167235651264964,7.631754221958367" strokeDashoffset="12.937961"/></g>
+<path d="M635.526041 11.526041c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="6.284456572647808,28.277539325580594" strokeDashoffset="6.284457"/>
+	<path d="M642 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M630 6l14 14" strokeDasharray="12.167235651264964,7.631754221958367" strokeDashoffset="12.937961"/></g>
 <g>
-<path d="M658.928119 10.928119c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="4.697995618520644,29.86400027970776" strokeDashoffset="4.697996"/>
-	<path d="M666 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M654 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="12.767983297079258,7.0310065761440725" strokeDashoffset="13.786075"/></g>
+<path d="M658.928119 10.928119c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="4.697995618520644,29.86400027970776" strokeDashoffset="4.697996"/>
+	<path d="M666 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M654 6l14 14" strokeDasharray="12.767983297079258,7.0310065761440725" strokeDashoffset="13.786075"/></g>
 <g>
-<path d="M682.325413 10.325413c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="3.3106118272797227,31.25138407094868" strokeDashoffset="3.310612"/>
-	<path d="M690 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M678 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="13.373536406566448,6.425453466656882" strokeDashoffset="14.640974"/></g>
+<path d="M682.325413 10.325413c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="3.3106118272797227,31.25138407094868" strokeDashoffset="3.310612"/>
+	<path d="M690 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M678 6l14 14" strokeDasharray="13.373536406566448,6.425453466656882" strokeDashoffset="14.640974"/></g>
 <g>
-<path d="M705.767949 9.767949c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="2.144255161401271,32.417740736827135" strokeDashoffset="2.144255"/>
-	<path d="M714 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M702 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="13.933634858692605,5.865355014530725" strokeDashoffset="15.431701"/></g>
+<path d="M705.767949 9.767949c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="2.144255161401271,32.417740736827135" strokeDashoffset="2.144255"/>
+	<path d="M714 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M702 6l14 14" strokeDasharray="13.933634858692605,5.865355014530725" strokeDashoffset="15.431701"/></g>
 <g>
-<path d="M729.277915 9.277915c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="1.21737868716119,33.34461721106722" strokeDashoffset="1.217379"/>
-	<path d="M738 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M726 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="14.425983832692227,5.373006040531105" strokeDashoffset="16.126782"/></g>
+<path d="M729.277915 9.277915c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="1.21737868716119,33.34461721106722" strokeDashoffset="1.217379"/>
+	<path d="M738 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M726 6l14 14" strokeDasharray="14.425983832692227,5.373006040531105" strokeDashoffset="16.126782"/></g>
 <g>
-<path d="M752.856988 8.856988c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0.5446466264987206,34.017349271729685" strokeDashoffset=".544647"/>
-	<path d="M762 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
-	<path d="M750 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="14.8489000760059,4.950089797217431" strokeDashoffset="16.72384"/></g>
+<path d="M752.856988 8.856988c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0.5446466264987206,34.017349271729685" strokeDashoffset=".544647"/>
+	<path d="M762 6l-12 12" strokeDasharray="0,16.970562748477143" strokeDashoffset="16.970563"/>
+	<path d="M750 6l14 14" strokeDasharray="14.8489000760059,4.950089797217431" strokeDashoffset="16.72384"/></g>
 <g>
-<path d="M776.498218 8.498218c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0.13670235263281355,34.425293545595586" strokeDashoffset=".136702"/>
-	<path d="M786 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0.04954015153185857,16.921022596945285" strokeDashoffset=".04954"/>
-	<path d="M774 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="15.209364520996399,4.589625352226933" strokeDashoffset="17.232731"/></g>
+<path d="M776.498218 8.498218c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0.13670235263281355,34.425293545595586" strokeDashoffset=".136702"/>
+	<path d="M786 6l-12 12" strokeDasharray="0.04954015153185857,16.921022596945285" strokeDashoffset=".04954"/>
+	<path d="M774 6l14 14" strokeDasharray="15.209364520996399,4.589625352226933" strokeDashoffset="17.232731"/></g>
 <g>
-<path d="M800.19274 8.19274c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M810 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0.34016354586580966,16.630399202611333" strokeDashoffset=".340164"/>
-	<path d="M798 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="15.51628711932629,4.28270275389704" strokeDashoffset="17.666033"/></g>
+<path d="M800.19274 8.19274c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M810 6l-12 12" strokeDasharray="0.34016354586580966,16.630399202611333" strokeDashoffset=".340164"/>
+	<path d="M798 6l14 14" strokeDasharray="15.51628711932629,4.28270275389704" strokeDashoffset="17.666033"/></g>
 <g>
-<path d="M823.932306 7.932306c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M834 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="0.9868120475607512,15.983750700916392" strokeDashoffset=".986812"/>
-	<path d="M822 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="15.777950950911132,4.021038922312199" strokeDashoffset="18.035441"/></g>
+<path d="M823.932306 7.932306c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M834 6l-12 12" strokeDasharray="0.9868120475607512,15.983750700916392" strokeDashoffset=".986812"/>
+	<path d="M822 6l14 14" strokeDasharray="15.777950950911132,4.021038922312199" strokeDashoffset="18.035441"/></g>
 <g>
-<path d="M847.709959 7.709959c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M858 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="2.141496577720929,14.829066170756214" strokeDashoffset="2.141497"/>
-	<path d="M846 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.00134849002381,3.7976413831995224" strokeDashoffset="18.350826"/></g>
+<path d="M847.709959 7.709959c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M858 6l-12 12" strokeDasharray="2.141496577720929,14.829066170756214" strokeDashoffset="2.141497"/>
+	<path d="M846 6l14 14" strokeDasharray="16.00134849002381,3.7976413831995224" strokeDashoffset="18.350826"/></g>
 <g>
-<path d="M871.520015 7.520015c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M882 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="3.9505717132230096,13.019991035254133" strokeDashoffset="3.950572"/>
-	<path d="M870 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.192189855374565,3.6068000178487662" strokeDashoffset="18.620249"/></g>
+<path d="M871.520015 7.520015c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M882 6l-12 12" strokeDasharray="3.9505717132230096,13.019991035254133" strokeDashoffset="3.950572"/>
+	<path d="M870 6l14 14" strokeDasharray="16.192189855374565,3.6068000178487662" strokeDashoffset="18.620249"/></g>
 <g>
-<path d="M895.357873 7.357873c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M906 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="6.302180599368272,10.66838214910887" strokeDashoffset="6.302181"/>
-	<path d="M894 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.35509763048364,3.443892242739689" strokeDashoffset="18.850236"/></g>
+<path d="M895.357873 7.357873c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M906 6l-12 12" strokeDasharray="6.302180599368272,10.66838214910887" strokeDashoffset="6.302181"/>
+	<path d="M894 6l14 14" strokeDasharray="16.35509763048364,3.443892242739689" strokeDashoffset="18.850236"/></g>
 <g>
-<path d="M919.219802 7.219802c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M930 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="8.677452782874232,8.29310996560291" strokeDashoffset="8.677453"/>
-	<path d="M918 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.493821074029313,3.305168799194017" strokeDashoffset="19.046081"/></g>
+<path d="M919.219802 7.219802c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M930 6l-12 12" strokeDasharray="8.677452782874232,8.29310996560291" strokeDashoffset="8.677453"/>
+	<path d="M918 6l14 14" strokeDasharray="16.493821074029313,3.305168799194017" strokeDashoffset="19.046081"/></g>
 <g>
-<path d="M943.102755 7.102755c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M954 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="10.67253247034681,6.298030278130332" strokeDashoffset="10.672532"/>
-	<path d="M942 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.611421119533304,3.187568753690026" strokeDashoffset="19.212105"/></g>
+<path d="M943.102755 7.102755c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M954 6l-12 12" strokeDasharray="10.67253247034681,6.298030278130332" strokeDashoffset="10.672532"/>
+	<path d="M942 6l14 14" strokeDasharray="16.611421119533304,3.187568753690026" strokeDashoffset="19.212105"/></g>
 <g>
-<path d="M967.004224 7.004224c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M978 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="12.236424264161396,4.734138484315746" strokeDashoffset="12.236424"/>
-	<path d="M966 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.710418052262046,3.0885718209612842" strokeDashoffset="19.351865"/></g>
+<path d="M967.004224 7.004224c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M978 6l-12 12" strokeDasharray="12.236424264161396,4.734138484315746" strokeDashoffset="12.236424"/>
+	<path d="M966 6l14 14" strokeDasharray="16.710418052262046,3.0885718209612842" strokeDashoffset="19.351865"/></g>
 <g>
-<path d="M990.922124 6.922124c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1002 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="13.447573230089192,3.52298951838795" strokeDashoffset="13.447573"/>
-	<path d="M990 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.792905974691024,3.006083898532307" strokeDashoffset="19.468319"/></g>
+<path d="M990.922124 6.922124c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1002 6l-12 12" strokeDasharray="13.447573230089192,3.52298951838795" strokeDashoffset="13.447573"/>
+	<path d="M990 6l14 14" strokeDasharray="16.792905974691024,3.006083898532307" strokeDashoffset="19.468319"/></g>
 <g>
-<path d="M1014.854708 6.854708c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1026 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="14.387866115533708,2.5826966329434358" strokeDashoffset="14.387866"/>
-	<path d="M1014 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.860640713425628,2.9383491597977027" strokeDashoffset="19.563944"/></g>
+<path d="M1014.854708 6.854708c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1026 6l-12 12" strokeDasharray="14.387866115533708,2.5826966329434358" strokeDashoffset="14.387866"/>
+	<path d="M1014 6l14 14" strokeDasharray="16.860640713425628,2.9383491597977027" strokeDashoffset="19.563944"/></g>
 <g>
-<path d="M1038.800497 6.800497c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1050 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="15.119371158831944,1.851191589645199" strokeDashoffset="15.119371"/>
-	<path d="M1038 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.915107341589753,2.883882531633579" strokeDashoffset="19.640838"/></g>
+<path d="M1038.800497 6.800497c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1050 6l-12 12" strokeDasharray="15.119371158831944,2.251191589645199" strokeDashoffset="15.119371"/>
+	<path d="M1038 6l14 14" strokeDasharray="16.915107341589753,2.883882531633579" strokeDashoffset="19.640838"/></g>
 <g>
-<path d="M1062.758232 6.758232c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1074 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="15.686637369348228,1.283925379128914" strokeDashoffset="15.686637"/>
-	<path d="M1062 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.957572294089704,2.841417579133626" strokeDashoffset="19.700789"/></g>
+<path d="M1062.758232 6.758232c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1074 6l-12 12" strokeDasharray="15.686637369348228,1.283925379128914" strokeDashoffset="15.686637"/>
+	<path d="M1062 6l14 14" strokeDasharray="16.957572294089704,2.841417579133626" strokeDashoffset="19.700789"/></g>
 <g>
-<path d="M1086.726829 6.726829c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1098 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.12177636941041,0.8487863790667334" strokeDashoffset="16.121776"/>
-	<path d="M1086 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="16.989123878332954,2.8098659948903757" strokeDashoffset="19.745332"/></g>
+<path d="M1086.726829 6.726829c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1098 6l-12 12" strokeDasharray="16.12177636941041,0.8487863790667334" strokeDashoffset="16.121776"/>
+	<path d="M1086 6l14 14" strokeDasharray="16.989123878332954,2.8098659948903757" strokeDashoffset="19.745332"/></g>
 <g>
-<path d="M1110.70535 6.70535c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1122 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.44839712212864,0.5221656263485024" strokeDashoffset="16.448397"/>
-	<path d="M1110 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.01070402264279,2.788285850580538" strokeDashoffset="19.775798"/></g>
+<path d="M1110.70535 6.70535c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1122 6l-12 12" strokeDasharray="16.44839712212864,0.5221656263485024" strokeDashoffset="16.448397"/>
+	<path d="M1110 6l14 14" strokeDasharray="17.01070402264279,2.788285850580538" strokeDashoffset="19.775798"/></g>
 <g>
-<path d="M1134.69298 6.69298c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1146 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.684258581711575,0.2863041667655689" strokeDashoffset="16.684259"/>
-	<path d="M1134 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.023133371288804,2.7758565019345283" strokeDashoffset="19.793346"/></g>
+<path d="M1134.69298 6.69298c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1146 6l-12 12" strokeDasharray="16.684258581711575,0.2863041667655689" strokeDashoffset="16.684259"/>
+	<path d="M1134 6l14 14" strokeDasharray="17.023133371288804,2.7758565019345283" strokeDashoffset="19.793346"/></g>
 <g>
-<path d="M1158.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1170 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.843016765270583,0.12754598320656046" strokeDashoffset="16.843017"/>
-	<path d="M1158 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1158.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1170 6l-12 12" strokeDasharray="16.843016765270583,0.12754598320656046" strokeDashoffset="16.843017"/>
+	<path d="M1158 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1182.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1194 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.935385327200127,0.035177421277016875" strokeDashoffset="16.935385"/>
-	<path d="M1182 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1182.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1194 6l-12 12" strokeDasharray="16.935385327200127,0.035177421277016875" strokeDashoffset="16.935385"/>
+	<path d="M1182 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1206.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1218 6l-12 12" fill="none" strokeWidth="1.8" strokeDasharray="16.96992109109502,0.0006416573821219008" strokeDashoffset="16.969921"/>
-	<path d="M1206 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1206.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1218 6l-12 12" strokeDasharray="16.96992109109502,0.0006416573821219008" strokeDashoffset="16.969921"/>
+	<path d="M1206 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1230.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1242 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1230 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1230.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1242 6l-12 12"/>
+	<path d="M1230 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1254.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1266 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1254 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1254.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1266 6l-12 12"/>
+	<path d="M1254 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1278.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1290 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1278 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1278.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1290 6l-12 12"/>
+	<path d="M1278 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1302.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1314 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1302 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1302.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1314 6l-12 12"/>
+	<path d="M1302 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1326.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1338 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1326 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1326.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1338 6l-12 12"/>
+	<path d="M1326 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1350.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1362 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1350 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1350.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1362 6l-12 12"/>
+	<path d="M1350 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1374.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1386 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1374 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1374.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1386 6l-12 12"/>
+	<path d="M1374 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1398.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1410 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1398 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1398.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1410 6l-12 12"/>
+	<path d="M1398 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1422.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1434 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1422 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
+<path d="M1422.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1434 6l-12 12"/>
+	<path d="M1422 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/></g>
 <g>
-<path d="M1446.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" fill="none" strokeWidth="1.8" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
-	<path d="M1458 6l-12 12" fill="none" strokeWidth="1.8"/>
-	<path d="M1446 6l14 14" fill="none" strokeWidth="1.8" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/>
+<path d="M1446.689 6.689c2.148-2.148 2.148-5.63 0-7.778-2.148-2.148-5.63-2.148-7.778 0-2.148 2.148-2.148 5.63 0 7.778 2.148 2.148 5.63 2.148 7.778 0z" strokeDasharray="0,34.5619958982284" strokeDashoffset="34.561996"/>
+	<path d="M1458 6l-12 12"/>
+	<path d="M1446 6l14 14" strokeDasharray="17.027131290972065,2.7718585822512667" strokeDashoffset="19.79899"/>
 	</g>
 </svg>
