@@ -5,14 +5,14 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY
-const MOVIE_DISCOVER_NUM_PAGES = 20
+const MOVIE_DISCOVER_NUM_PAGES = 40
 const MOVIE_DISCOVER_DELAY_BETWEEN_PAGES = 5000
 const MOVIE_DETAILS_NUM_MOVIES_BEFORE_DELAY = 20
 const MOVIE_DETAILS_DELAY = 5000
 
 function getPopularMovies() {
     return new Promise(async resolve => {
-        const unwantedMovieIds = [537915, 332562, 454983, 487558, 514999]
+        const unwantedMovieIds = [537915, 332562, 454983, 487558, 514999, 805, 420818]
         const baseUrl = 'https://api.themoviedb.org/3/discover/movie?'
         const searchParams = {
             api_key: TMDB_API_KEY,
