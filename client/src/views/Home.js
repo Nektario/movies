@@ -21,14 +21,26 @@ function Home(props) {
                 .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
         },
         {
+            title: 'Top Rated',
+            movies: props.allMovies
+                .filter(movie => movie.vote_average > 7)
+                .sort((a, b) => b.vote_average - a.vote_average)
+        },
+        {
             title: 'Kids',
             movies: props.allMovies
                 .filter(movie => movie.rated === 'G' || (movie.genres.includes('Animation') && (movie.rated === 'G' || movie.rated === 'PG')))
         },
         {
-            title: 'Comedies',
+            title: 'Comedy',
             movies: props.allMovies
                 .filter(movie => movie.genres.includes('Comedy'))
+        }
+        ,
+        {
+            title: 'Action',
+            movies: props.allMovies
+                .filter(movie => movie.genres.includes('Action'))
         }
     ]
 
