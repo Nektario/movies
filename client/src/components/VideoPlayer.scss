@@ -5,6 +5,14 @@
     .video {
         display: block;
         outline: none;
+        z-index: 0;
+    }
+
+    .video-controls {
+        position: absolute;
+        right: 11.5vw;
+        bottom: 5vw;
+        z-index: 1;
     }
 
     .video-rated-bar {
@@ -12,13 +20,6 @@
         right: 0;
         bottom: 5vw;
         z-index: 2
-    }
-
-    .video-controls {
-        position: absolute;
-        right: 11.5vw;
-        bottom: 5vw;
-        z-index: 2;
     }
 }
 

@@ -73,14 +73,15 @@ function Feature(props) {
             </div>
 
             {/* These are absolutely positioned */}
-            <CrossfadeChildren toggle={showPoster}>
+            {/* <CrossfadeChildren toggle={showPoster}> */}
                 <Backdrop
                     src={props.movie.backdrop_path}
-                    className='feature-poster'
+                    className={`feature-poster ${showPoster ? '' : 'feature-hidden'}`}
+                    shouldFadeIn={true}
                 />
 
                 <VideoPlayer
-                    className='feature-video'
+                    className={`feature-video ${showPoster ? 'feature-hidden' : ''}`}
                     shouldPlay={!showPoster}
                     showRatedBar={false}
                     onVideoEnded={handleVideoEnded}
@@ -89,7 +90,7 @@ function Feature(props) {
                     path={config.FEATURE_VIDEO_URL + '/' + props.movie.featureTrailer.name}
                     mimeType={props.movie.featureTrailer.mimeType}
                 />
-            </CrossfadeChildren>
+            {/* </CrossfadeChildren> */}
         </div>
     )
 }

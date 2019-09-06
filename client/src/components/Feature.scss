@@ -1,9 +1,13 @@
 @import '../variables';
 
 .feature-poster {
+    opacity: 1;
     position: absolute;
     height: $feature-height;
     width: 100vw;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 1500ms cubic-bezier(.02, .01, .47, 1);
 
     img {
         object-fit: cover;
@@ -13,10 +17,17 @@
 }
 
 .feature-video {
+    opacity: 1;
     position: absolute;
     height: $feature-height;
     width: 100%;
     object-fit: cover;
+    transition: opacity 1500ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.feature-hidden {
+    opacity: 0;
+    transition: opacity 1500ms cubic-bezier(.02, .01, .47, 1);
 }
 
 .feature {
