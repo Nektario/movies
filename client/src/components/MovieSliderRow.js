@@ -190,7 +190,7 @@ function MovieSliderRowDetails(props) {
                         className='row-details-backdrop'
                         src={props.item.backdrop_path}
                         style={{height: ROW_DETAILS_HEIGHT}}
-                        alt={props.item.title + ' backdrop'}
+                        alt={props.item.title + ' backdrop poster'}
                     />
                 }
             />

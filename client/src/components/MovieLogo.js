@@ -5,7 +5,7 @@ function MovieLogo(props) {
     const url = config.FEATURE_LOGO_URL + '/' + props.src
     
     return (
-        <img src={url} alt='logo' />
+        <img src={url} alt='Movies logo' aria-label='Movies logo' />
     )
 }
 

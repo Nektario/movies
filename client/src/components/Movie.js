@@ -23,7 +23,7 @@ const Movie = React.forwardRef(({ item: movie, shouldShowOverlay, className, onM
         >
             { isVisible &&
                 <>
-                    <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.title + ' poster'} />
+                    <img src={`${POSTER_URL}${movie.poster_path}`} alt={movie.title + ' poster'} aria-label={movie.title + ' poster'} />
 
                     {/* It's too slow to render the Actions and Info components for all items when they mount.
                         So instead, they only render for an item once it has been hovered */}
