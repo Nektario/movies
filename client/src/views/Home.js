@@ -58,9 +58,9 @@ function Home(props) {
                 <div className='bottom-fader'></div>
             </div>
 
-            <main>
+            <div className='content'>
                 <HorizontallyScrollableRowView rows={rows} />
-            </main>
+            </div>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { useMyListHelper } from './my-list-context'
 import featuredMovies from './data/feature-movies'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './views/Home'
 import Search from './views/Search'
 import ItemList from './views/ItemList'
@@ -36,12 +37,15 @@ function App() {
     return (
         <Router>
             <Header />
+            <main>
             <Switch>
                 <Route path='/home' render={props => <Home {...props} allMovies={allMovies} feature={featureMovie.current} />} />
                 <Route path='/my-list' render={props => <ItemList {...props} movies={allMovies.filter(movie => myListHelper.isInMyList(movie))} />} />
                 <Route path='/search' render={props => <Search {...props} allMovies={allMovies} />} />
                 <Route render={() => <Redirect to='/home' />} />
             </Switch>
+            </main>
+            <Footer />
         </Router>
     )
 }
